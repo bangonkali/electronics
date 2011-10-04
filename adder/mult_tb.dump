@@ -1,0 +1,84 @@
+$date
+	Fri Sep 30 23:56:40 2011
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mult_tb $end
+$var wire 1 ! done $end
+$var wire 16 " r [15:0] $end
+$var reg 8 # a [7:0] $end
+$var reg 8 $ b [7:0] $end
+$var reg 1 % clk $end
+$var reg 1 & start $end
+$scope module uut $end
+$var wire 8 ' a [7:0] $end
+$var wire 8 ( b [7:0] $end
+$var wire 1 ) clk $end
+$var wire 1 * start $end
+$var reg 8 + bbuf [7:0] $end
+$var reg 1 , done $end
+$var reg 16 - r [15:0] $end
+$var reg 1 . startbuff $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1.
+b0 -
+0,
+b0 +
+1*
+0)
+b100 (
+b11 '
+1&
+0%
+b100 $
+b11 #
+b0 "
+0!
+$end
+#10
+b11 -
+b11 "
+0.
+b11 +
+1%
+1)
+#20
+0%
+0)
+#30
+b110 -
+b110 "
+b10 +
+1%
+1)
+#40
+0%
+0)
+#50
+b1001 -
+b1001 "
+b1 +
+1%
+1)
+#60
+0%
+0)
+#70
+1,
+1!
+b1100 -
+b1100 "
+b0 +
+1%
+1)
+#80
+0%
+0)
