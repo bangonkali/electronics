@@ -72,6 +72,12 @@ This image shows the final state diagram from which the Verilog code was pattern
 
 [[File:http://i.imgur.com/RJb3p.png|frame]]
 
+==== Wave Form Output ====
+
+After compiling the Verilog Simulation files. The wave form dump is shown below.
+
+[[File:http://i.imgur.com/gXWGG.png|frame]]
+
 ==== For more info: ==== 
 
 Thanks to JM for the solution. ^_^
