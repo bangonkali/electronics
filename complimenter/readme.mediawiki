@@ -1,27 +1,68 @@
 === 2's Complementer ===
+
 One input, one output serial 2's complementer.
 
 '''Problem: '''
+
 Design a one input, one output serial 2's complementer. The circuit accepts a string of bits from the input and generates the 2's complement at the output. The circuit can be reset asynchronously to start and end the operation.
 
 '''Required:'''
+
 # Show the design process and the final logic circuit.
 # Simulate your circuit using your preferred simulator. Attach screenshots and/or simulation file.
 
 '''Usage:'''
+
 To compile, use iVerilog for Windows. More information from [http://goo.gl/kXqTY here].
 
 '''Compilation Command:'''
+
 <code>iVerilog dff_async_reset.v compliment.v compliment_tb.v -o compliment_tb.vvp</code>
 
 '''Simulation Command:'''
+
 <code>vvp compliment_tb.vvp -vcd</code>
 
 '''Show wave:'''
+
 <code>GTKWave compliment_tb.dump</code>
 
 '''Discussion:'''
-no data yet
+
+The output is 0 for all 0 inputs until the first 1 occurs at which time, the output is 1.
+Thereafter, the output is the complement of the input.
+
+The view of the FSM.
+[[File:http://i.imgur.com/fvrn6.png|frame|100px]]
+
+The state diagram has two states
+
+<code>State 0 : Output = Input
+State1 : Output = Complement of input</code>
+
+{|
+|  Previous State || Input || Next State || Output
+|-
+|   A || X || A || Y
+|-
+|   0 || 0 || 0 || 0
+|-
+|   0 || 1 || 1 || 1
+|-
+|   1 || 0 || 1 || 1
+|-
+|   1 || 1 || 1 || 0
+|}
+
+DA = A + x
+y = A &amp;otimes; x
+
+[[File:http://i.imgur.com/RJb3p.png|frame|100px]]
+
+Wave Form:
+
+This is the view of the wave form. 
+[[File:http://i.imgur.com/gXWGG.png|frame|100px]]
 
 '''For more info: '''
 [mailto:bangonkali@istoryahi.me email me] '''Mobile:''' +639993192420
