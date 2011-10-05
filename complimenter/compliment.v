@@ -1,9 +1,10 @@
 //-----------------------------------------------------
-// Design Name : compliment
-// File Name   : compliment.v
-// Function    : Serial 2's Complementer 
-// Problem     : http://j.mp/qHe6PE 
-// Coder       : Bangon Kali
+// Design Name : compliment_tb
+// File Name   : compliment_tb.v
+// Function    : D flip-flop async reset
+// Coder       : Bangon Kali bangonkali@istoryahi.me
+// Repository  : at github http://goo.gl/0TyRj
+// Dependency  : dff_async_reset.v
 //-----------------------------------------------------
 
 module compliment(

@@ -2,8 +2,9 @@
 // Design Name : compliment_tb
 // File Name   : compliment_tb.v
 // Function    : D flip-flop async reset
-// Coder       : Deepak Kumar Tala http://goo.gl/s6bxD
-// Modified    : Bangon Kali bangonkali@istoryahi.me
+// Coder       : Bangon Kali bangonkali@istoryahi.me
+// Repository  : at github http://goo.gl/0TyRj
+// Dependency  : compliment.v
 //-----------------------------------------------------
 
 module compliment_tb;
