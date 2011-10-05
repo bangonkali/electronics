@@ -1,10 +1,13 @@
-Traffic Light System
-EE 177 LAB Project
+Electronic Projects Versioning Repo
 
-Source code and project versioning system repository.
+For more info: bangonkali@istoryahi.me
+Mobile: +639993192420
 
-for more info
-bangonkali@istoryahi.me
-+639993192420
+adder
+	Some Verilog Code for Adders / Multipliers
 
-test.
+complimenter
+	One input, one output serial 2's complementer.
+
+tls
+	Traffic Light System
