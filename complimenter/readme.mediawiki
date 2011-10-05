@@ -11,7 +11,7 @@ Design a one input, one output serial 2's complementer. The circuit accepts a st
 # Show the design process and the final logic circuit.
 # Simulate your circuit using your preferred simulator. Attach screenshots and/or simulation file.
 
-'''Usage:'''
+=== Usage: === 
 
 To compile, use iVerilog for Windows. More information from [http://goo.gl/kXqTY here].
 
@@ -27,19 +27,18 @@ To compile, use iVerilog for Windows. More information from [http://goo.gl/kXqTY
 
 <code>GTKWave compliment_tb.dump</code>
 
-'''Discussion:'''
+=== Discussion: === 
 
-The output is 0 for all 0 inputs until the first 1 occurs at which time, the output is 1.
-Thereafter, the output is the complement of the input.
+The output is 0 for all 0 inputs until the first 1 occurs at which time, the output is 1. Thereafter, the output is the complement of the input. The ff image is the view of the FSM.
 
-<center>[[File:http://i.imgur.com/fvrn6.png|frame|100px|The view of the FSM.]]</center>
+==== State Diagram ====
 
-The state diagram has two states
+[[File:http://i.imgur.com/fvrn6.png|frame]]
 
 <code>State 0 : Output = Input<br />
 State1 : Output = Complement of input</code>
 
-<center>
+==== Truth Table ====
 {|
 |  Previous State || Input || Next State || Output
 |-
@@ -53,15 +52,17 @@ State1 : Output = Complement of input</code>
 |-
 |   1 || 1 || 1 || 0
 |}
-</center>
+
+==== Boolean Representation ====
 
 <code>DA = A + x<br />
 y = A XOR x</code>
 
-[[File:http://i.imgur.com/RJb3p.png|frame|100px|The circuit diagram.]]
+==== Circuit Diagram ====
 
-[[File:http://i.imgur.com/gXWGG.png|frame|100px|This is the view of the wave form.]]
+[[File:http://i.imgur.com/RJb3p.png|frame]]
 
-'''For more info: '''
+
+==== For more info: ==== 
 bangonkali@istoryahi.me<br />
 '''Mobile:''' +639993192420
