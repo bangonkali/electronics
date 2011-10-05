@@ -10,14 +10,14 @@ module dff_async_reset (
 	input wire data, // Data Input
 	input wire clk, // Clock Input
 	input wire reset, // Reset input 
-	output reg q // Q output
+	output reg q = 0 // Q output
 );
 
 	always @ ( posedge clk or negedge reset)
 	if (~reset) begin
-	  q <= 1'b0;
+	  q = 1'b0;
 	end else begin
-	  q <= data;
+	  q = data;
 	end
 
 endmodule //End Of Module dff_async_reset

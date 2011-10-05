@@ -1,12 +1,12 @@
 //-----------------------------------------------------
-// Design Name : comp
-// File Name   : comp.v
+// Design Name : compliment
+// File Name   : compliment.v
 // Function    : Serial 2's Complementer 
 // Problem     : http://j.mp/qHe6PE 
 // Coder       : Bangon Kali
 //-----------------------------------------------------
 
-module comp(
+module compliment(
 	input wire x, 
 	input wire reset,
 	input wire clk,
