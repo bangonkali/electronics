@@ -5,14 +5,13 @@
 // Coder       : Deepak Kumar Tala http://goo.gl/s6bxD
 // Modified    : Bangon Kali bangonkali@istoryahi.me
 //-----------------------------------------------------
+
 module dff_async_reset (
-	input data,    // Data Input
-	input clk,     // Clock Input
-	input reset,   // Reset input 
-	output q       // Q output
+	input wire data, // Data Input
+	input wire clk, // Clock Input
+	input wire reset, // Reset input 
+	output reg q // Q output
 );
-	
-	wire q;
 
 	always @ ( posedge clk or negedge reset)
 	if (~reset) begin
