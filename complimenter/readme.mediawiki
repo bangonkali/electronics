@@ -1,28 +1,27 @@
-'2's Complementer'
+=== 2's Complementer ===
 One input, one output serial 2's complementer.
 
+'''Problem: '''
 Design a one input, one output serial 2's complementer. The circuit accepts a string of bits from the input and generates the 2's complement at the output. The circuit can be reset asynchronously to start and end the operation.
 
-Required:
+'''Required:'''
+# Show the design process and the final logic circuit.
+# Simulate your circuit using your preferred simulator. Attach screenshots and/or simulation file.
 
-a.) Show the design process and the final logic circuit.
-b.) Simulate your circuit using your preferred simulator. Attach screenshots and/or simulation file.
+'''Usage:'''
+To compile, use iVerilog for Windows. More information from [http://goo.gl/kXqTY here].
 
-Usage:
+'''Compilation Command:'''
+<code>iVerilog dff_async_reset.v compliment.v compliment_tb.v -o compliment_tb.vvp</code>
 
-To compile, use iVerilog for Windows. More information from http://goo.gl/kXqTY.
+'''Simulation Command:'''
+<code>vvp compliment_tb.vvp -vcd</code>
 
-Compilation Command:
-iVerilog dff_async_reset.v compliment.v compliment_tb.v -o compliment_tb.vvp
+'''Show wave:'''
+<code>GTKWave compliment_tb.dump</code>
 
-Simulation Command:
-vvp compliment_tb.vvp -vcd
+'''Discussion:'''
+no data yet
 
-Show wave:
-GTKWave compliment_tb.dump
-
-Discussion:
-
-
-For more info: bangonkali@istoryahi.me
-Mobile: +639993192420
+'''For more info: '''
+[mailto:bangonkali@istoryahi.me email me] '''Mobile:''' +639993192420
