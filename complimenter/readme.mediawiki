@@ -32,14 +32,14 @@ To compile, use iVerilog for Windows. More information from [http://goo.gl/kXqTY
 The output is 0 for all 0 inputs until the first 1 occurs at which time, the output is 1.
 Thereafter, the output is the complement of the input.
 
-The view of the FSM.
-[[File:http://i.imgur.com/fvrn6.png|frame|100px]]
+<center>[[File:http://i.imgur.com/fvrn6.png|frame|100px|The view of the FSM.]]</center>
 
 The state diagram has two states
 
-<code>State 0 : Output = Input
+<code>State 0 : Output = Input<br />
 State1 : Output = Complement of input</code>
 
+<center>
 {|
 |  Previous State || Input || Next State || Output
 |-
@@ -53,16 +53,15 @@ State1 : Output = Complement of input</code>
 |-
 |   1 || 1 || 1 || 0
 |}
+</center>
 
-DA = A + x
-y = A &amp;otimes; x
+<code>DA = A + x<br />
+y = A XOR x</code>
 
-[[File:http://i.imgur.com/RJb3p.png|frame|100px]]
+[[File:http://i.imgur.com/RJb3p.png|frame|100px|The circuit diagram.]]
 
-Wave Form:
-
-This is the view of the wave form. 
-[[File:http://i.imgur.com/gXWGG.png|frame|100px]]
+[[File:http://i.imgur.com/gXWGG.png|frame|100px|This is the view of the wave form.]]
 
 '''For more info: '''
-[mailto:bangonkali@istoryahi.me email me] '''Mobile:''' +639993192420
+bangonkali@istoryahi.me<br />
+'''Mobile:''' +639993192420
