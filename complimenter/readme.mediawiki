@@ -80,9 +80,9 @@ After compiling the Verilog Simulation files. The wave form dump is shown below.
 
 ==== For more info: ==== 
 
-Thanks to JM for the solution. ^_^
-
 bangonkali@istoryahi.me
 
 '''Mobile:''' +639993192420
+
+credits to jm for the solution. salamat. 
 
