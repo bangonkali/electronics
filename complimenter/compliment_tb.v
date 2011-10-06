@@ -1,7 +1,7 @@
 //-----------------------------------------------------
 // Design Name : compliment_tb
 // File Name   : compliment_tb.v
-// Function    : D flip-flop async reset
+// Function    : 2's Complimenter Test bench code.
 // Coder       : Bangon Kali bangonkali@istoryahi.me
 // Repository  : at github http://goo.gl/0TyRj
 // Dependency  : compliment.v

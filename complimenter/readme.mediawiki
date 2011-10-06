@@ -39,9 +39,9 @@ The following diagram shows the FSM diagram from the description above.
 
 Which evaluates to the ff conclusion.
 
-<code>State 0 : Output = Input
+<code>State 0 : Output = Input</code>
 
-State1 : Output = Complement of input</code>
+<code>State1 : Output = Complement of input</code>
 
 ==== Truth Table ====
 {|
@@ -62,9 +62,9 @@ State1 : Output = Complement of input</code>
 
 These are the boolean expressions used to evaluate the value of Y.
 
-<code>DA = A + x
+<code>DA = A + x</code>
 
-y = A XOR x</code>
+<code>y = A XOR x</code>
 
 ==== Circuit Diagram ====
 
@@ -80,9 +80,9 @@ After compiling the Verilog Simulation files. The wave form dump is shown below.
 
 ==== For more info: ==== 
 
-Thanks to JM for the solution. ^_^
-
 bangonkali@istoryahi.me
 
 '''Mobile:''' +639993192420
+
+credits to jm for the solution. salamat. 
 
