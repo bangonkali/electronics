@@ -10,7 +10,7 @@
 module compliment_tb;
 
 	reg x = 0;
-	reg reset = 1;
+	reg reset = 0;
 	reg clk = 0;
 	
 	wire y;
@@ -23,6 +23,7 @@ module compliment_tb;
 		$dumpfile("compliment_tb.dump");
 		$dumpvars;
 		
+		x = 0;
 		#20 x = 0;
 		#20 x = 0;
 		#20 x = 0;
@@ -32,35 +33,18 @@ module compliment_tb;
 		#20 x = 1;
 		#20 x = 0;
 		#20 x = 0;
-		#20 x = 1;
-		#20 x = 0;
-		#20 x = 0;
-		#20 x = 0;
-		#20 x = 0;
-		#20 x = 1;
-		#20 x = 1;
-		#20 x = 1;
-		#20 x = 0;
-		#20 x = 0;
-		#20 x = 1;
-		#20 x = 1;
-		#20 x = 1;
-		#20 x = 1;
 		#20 x = 0;
 		#20 x = 0;
 		#20 x = 1;
 		#20 x = 0;
 		#20 x = 0;
 		#20 x = 0;
-		#20 x = 0;
-		#20 x = 1;
 		#20 x = 0;
 		
-		#20 reset = 0;
 		#20 reset = 1;
+		#20 reset = 0;
 		
-		#20 x = 0;
-		#20 x = 0;
+		x = 0;
 		#20 x = 0;
 		#20 x = 0;
 		#20 x = 0;
@@ -69,25 +53,31 @@ module compliment_tb;
 		#20 x = 0;
 		#20 x = 1;
 		#20 x = 1;
-		#20 x = 1;
 		#20 x = 0;
 		#20 x = 0;
-		#20 x = 0;
-		#20 x = 1;
-		#20 x = 0;
-		#20 x = 1;
 		#20 x = 0;
 		#20 x = 0;
 		#20 x = 0;
 		#20 x = 1;
 		#20 x = 0;
 		#20 x = 1;
-		#20 x = 1;
-		#20 x = 1;
-		#20 x = 0;
-		#20 x = 0;
-		#20 x = 0;
 		
-		#20 $finish;
+		#20 reset = 1;
+		#20 reset = 0;
+		
+        x = 1;
+		#20 x = 1;
+		#20 x = 1;
+		#20 x = 1;
+		#20 x = 0;
+		#20 x = 1;
+		#20 x = 0;
+		#20 x = 0;
+		#20 x = 0;
+		#20 x = 1;
+		#20 x = 0;
+		#20 x = 1;
+		
+		$finish
 	end
 endmodule

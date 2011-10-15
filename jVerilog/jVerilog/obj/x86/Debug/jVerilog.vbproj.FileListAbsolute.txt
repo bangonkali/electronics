@@ -1,0 +1,14 @@
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\bin\Debug\jVerilog.exe
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\bin\Debug\jVerilog.pdb
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\bin\Debug\jVerilog.xml
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Debug\jVerilog.frmMain.resources
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Debug\jVerilog.Resources.resources
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Debug\jVerilog.exe
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Debug\jVerilog.xml
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Debug\jVerilog.pdb
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\bin\Debug\jVerilog.exe.config
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Debug\jVerilog.frmAbout.resources
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Debug\jVerilog.frmNewProject.resources

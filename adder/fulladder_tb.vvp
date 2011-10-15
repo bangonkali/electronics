@@ -4,77 +4,77 @@
 :vpi_module "system";
 :vpi_module "v2005_math";
 :vpi_module "va_math";
-S_003D7E48 .scope module, "adder_tb" "adder_tb" 2 1;
+S_003E4B18 .scope module, "fulladder_tb" "fulladder_tb" 2 5;
  .timescale 0 0;
-v005FEF90_0 .var "c_in", 0 0;
-v005FEFE8_0 .net "c_out", 0 0, L_005FF2D0; 1 drivers
-v005FF040_0 .net "s", 0 0, L_005FF1B8; 1 drivers
-v005FF098_0 .var "x", 0 0;
-v005FF0F0_0 .var "y", 0 0;
-S_003D7ED0 .scope module, "uut" "full_adder" 2 6, 3 1, S_003D7E48;
+v00327D48_0 .var "c_in", 0 0;
+v00327DA0_0 .net "c_out", 0 0, L_00300838; 1 drivers
+v00327DF8_0 .net "s", 0 0, L_003E2E18; 1 drivers
+v00327E50_0 .var "x", 0 0;
+v00327EA8_0 .var "y", 0 0;
+S_002F1000 .scope module, "uut" "full_adder" 2 10, 3 5, S_003E4B18;
  .timescale 0 0;
-L_003D69D8 .functor XOR 1, v005FF098_0, v005FF0F0_0, C4<0>, C4<0>;
-L_005FF180 .functor AND 1, v005FF098_0, v005FF0F0_0, C4<1>, C4<1>;
-L_005FF1B8 .functor XOR 1, L_003D69D8, v005FEF90_0, C4<0>, C4<0>;
-L_005FF298 .functor AND 1, L_003D69D8, v005FEF90_0, C4<1>, C4<1>;
-L_005FF2D0 .functor OR 1, L_005FF298, L_005FF180, C4<0>, C4<0>;
-v005E1F98_0 .net "a0", 0 0, L_003D69D8; 1 drivers
-v005FEC58_0 .net "a1", 0 0, L_005FF180; 1 drivers
-v005FECC8_0 .net "a2", 0 0, L_005FF298; 1 drivers
-v005FED50_0 .net "c_in", 0 0, v005FEF90_0; 1 drivers
-v005FEDC0_0 .alias "c_out", 0 0, v005FEFE8_0;
-v005FEE18_0 .alias "s", 0 0, v005FF040_0;
-v005FEE88_0 .net "x", 0 0, v005FF098_0; 1 drivers
-v005FEF20_0 .net "y", 0 0, v005FF0F0_0; 1 drivers
-    .scope S_003D7E48;
+L_003E2D38 .functor XOR 1, v00327E50_0, v00327EA8_0, C4<0>, C4<0>;
+L_003E2DE0 .functor AND 1, v00327E50_0, v00327EA8_0, C4<1>, C4<1>;
+L_003E2E18 .functor XOR 1, L_003E2D38, v00327D48_0, C4<0>, C4<0>;
+L_00300800 .functor AND 1, L_003E2D38, v00327D48_0, C4<1>, C4<1>;
+L_00300838 .functor OR 1, L_00300800, L_003E2DE0, C4<0>, C4<0>;
+v003E4BA0_0 .net "a0", 0 0, L_003E2D38; 1 drivers
+v003EAD38_0 .net "a1", 0 0, L_003E2DE0; 1 drivers
+v003EA468_0 .net "a2", 0 0, L_00300800; 1 drivers
+v003ECE70_0 .net "c_in", 0 0, v00327D48_0; 1 drivers
+v003ECEC8_0 .alias "c_out", 0 0, v00327DA0_0;
+v003ECF20_0 .alias "s", 0 0, v00327DF8_0;
+v003ECF78_0 .net "x", 0 0, v00327E50_0; 1 drivers
+v00327CF0_0 .net "y", 0 0, v00327EA8_0; 1 drivers
+    .scope S_003E4B18;
 T_0 ;
-    %vpi_call 2 9 "$dumpfile", "adder_tb.dump";
-    %vpi_call 2 10 "$dumpvars";
-    %set/v v005FF098_0, 0, 1;
-    %set/v v005FF0F0_0, 0, 1;
-    %set/v v005FEF90_0, 0, 1;
+    %vpi_call 2 14 "$dumpfile", "adder_tb.dump";
+    %vpi_call 2 15 "$dumpvars";
+    %set/v v00327E50_0, 0, 1;
+    %set/v v00327EA8_0, 0, 1;
+    %set/v v00327D48_0, 0, 1;
     %delay 10, 0;
-    %vpi_call 2 13 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v005FF098_0, v005FF0F0_0, v005FEF90_0, v005FF040_0, v005FEFE8_0;
-    %set/v v005FF098_0, 0, 1;
-    %set/v v005FF0F0_0, 0, 1;
-    %set/v v005FEF90_0, 1, 1;
+    %vpi_call 2 18 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v00327E50_0, v00327EA8_0, v00327D48_0, v00327DF8_0, v00327DA0_0;
+    %set/v v00327E50_0, 0, 1;
+    %set/v v00327EA8_0, 0, 1;
+    %set/v v00327D48_0, 1, 1;
     %delay 10, 0;
-    %vpi_call 2 16 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v005FF098_0, v005FF0F0_0, v005FEF90_0, v005FF040_0, v005FEFE8_0;
-    %set/v v005FF098_0, 0, 1;
-    %set/v v005FF0F0_0, 1, 1;
-    %set/v v005FEF90_0, 0, 1;
+    %vpi_call 2 21 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v00327E50_0, v00327EA8_0, v00327D48_0, v00327DF8_0, v00327DA0_0;
+    %set/v v00327E50_0, 0, 1;
+    %set/v v00327EA8_0, 1, 1;
+    %set/v v00327D48_0, 0, 1;
     %delay 10, 0;
-    %vpi_call 2 19 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v005FF098_0, v005FF0F0_0, v005FEF90_0, v005FF040_0, v005FEFE8_0;
-    %set/v v005FF098_0, 0, 1;
-    %set/v v005FF0F0_0, 1, 1;
-    %set/v v005FEF90_0, 1, 1;
+    %vpi_call 2 24 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v00327E50_0, v00327EA8_0, v00327D48_0, v00327DF8_0, v00327DA0_0;
+    %set/v v00327E50_0, 0, 1;
+    %set/v v00327EA8_0, 1, 1;
+    %set/v v00327D48_0, 1, 1;
     %delay 10, 0;
-    %vpi_call 2 22 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v005FF098_0, v005FF0F0_0, v005FEF90_0, v005FF040_0, v005FEFE8_0;
-    %set/v v005FF098_0, 1, 1;
-    %set/v v005FF0F0_0, 0, 1;
-    %set/v v005FEF90_0, 0, 1;
+    %vpi_call 2 27 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v00327E50_0, v00327EA8_0, v00327D48_0, v00327DF8_0, v00327DA0_0;
+    %set/v v00327E50_0, 1, 1;
+    %set/v v00327EA8_0, 0, 1;
+    %set/v v00327D48_0, 0, 1;
     %delay 10, 0;
-    %vpi_call 2 25 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v005FF098_0, v005FF0F0_0, v005FEF90_0, v005FF040_0, v005FEFE8_0;
-    %set/v v005FF098_0, 1, 1;
-    %set/v v005FF0F0_0, 0, 1;
-    %set/v v005FEF90_0, 1, 1;
+    %vpi_call 2 30 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v00327E50_0, v00327EA8_0, v00327D48_0, v00327DF8_0, v00327DA0_0;
+    %set/v v00327E50_0, 1, 1;
+    %set/v v00327EA8_0, 0, 1;
+    %set/v v00327D48_0, 1, 1;
     %delay 10, 0;
-    %vpi_call 2 28 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v005FF098_0, v005FF0F0_0, v005FEF90_0, v005FF040_0, v005FEFE8_0;
-    %set/v v005FF098_0, 1, 1;
-    %set/v v005FF0F0_0, 1, 1;
-    %set/v v005FEF90_0, 0, 1;
+    %vpi_call 2 33 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v00327E50_0, v00327EA8_0, v00327D48_0, v00327DF8_0, v00327DA0_0;
+    %set/v v00327E50_0, 1, 1;
+    %set/v v00327EA8_0, 1, 1;
+    %set/v v00327D48_0, 0, 1;
     %delay 10, 0;
-    %vpi_call 2 31 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v005FF098_0, v005FF0F0_0, v005FEF90_0, v005FF040_0, v005FEFE8_0;
-    %set/v v005FF098_0, 1, 1;
-    %set/v v005FF0F0_0, 1, 1;
-    %set/v v005FEF90_0, 1, 1;
+    %vpi_call 2 36 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v00327E50_0, v00327EA8_0, v00327D48_0, v00327DF8_0, v00327DA0_0;
+    %set/v v00327E50_0, 1, 1;
+    %set/v v00327EA8_0, 1, 1;
+    %set/v v00327D48_0, 1, 1;
     %delay 10, 0;
-    %vpi_call 2 34 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v005FF098_0, v005FF0F0_0, v005FEF90_0, v005FF040_0, v005FEFE8_0;
+    %vpi_call 2 39 "$display", "x=%b, y=%b, c_in=%b, s=%b, c_out=%b", v00327E50_0, v00327EA8_0, v00327D48_0, v00327DF8_0, v00327DA0_0;
     %end;
     .thread T_0;
 # The file index is used to find the file name in the following table.
 :file_names 4;
     "N/A";
     "<interactive>";
-    "fulladder_tb.v";
-    "fulladder.v";
+    "C:\Users\Bangonkali\Documents\Project\tls\adder\fulladder_tb.v";
+    "C:\Users\Bangonkali\Documents\Project\tls\adder\fulladder.v";

@@ -1,0 +1,14 @@
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\bin\Release\jVerilog.exe.config
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\bin\Release\jVerilog.exe
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\bin\Release\jVerilog.pdb
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\bin\Release\jVerilog.xml
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Release\jVerilog.frmAbout.resources
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Release\jVerilog.frmMain.resources
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Release\jVerilog.frmNewProject.resources
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Release\jVerilog.Resources.resources
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Release\GenerateResource-ResGen.read.1.tlog
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Release\GenerateResource-ResGen.write.1.tlog
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Release\jVerilog.exe
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Release\jVerilog.xml
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Release\jVerilog.pdb

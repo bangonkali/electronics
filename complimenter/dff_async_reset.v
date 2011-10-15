@@ -15,8 +15,8 @@ module dff_async_reset (
 	output reg q = 0 // Q output
 );
 
-	always @ ( posedge clk or negedge reset)
-	if (~reset) begin
+	always @ ( posedge clk or negedge reset or posedge reset)
+	if (reset) begin
 	  q = 1'b0;
 	end else begin
 	  q = data;
