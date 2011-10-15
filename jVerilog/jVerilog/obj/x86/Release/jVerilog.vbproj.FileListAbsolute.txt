@@ -12,3 +12,4 @@ C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Release\Gene
 C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Release\jVerilog.exe
 C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Release\jVerilog.xml
 C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Release\jVerilog.pdb
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\bin\Release\Puzzle.SyntaxBox.NET3.5.dll

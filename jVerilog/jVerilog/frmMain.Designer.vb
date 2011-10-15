@@ -34,7 +34,7 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.barStatus = New System.Windows.Forms.StatusStrip()
         Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.mnuMain = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -50,30 +50,44 @@ Partial Class frmMain
         Me.ShowWaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripSeparator()
         Me.ChangeWorkingDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClearLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
+        Me.toolMain = New System.Windows.Forms.ToolStripContainer()
+        Me.splitMain = New System.Windows.Forms.SplitContainer()
+        Me.tabMain = New System.Windows.Forms.TabControl()
+        Me.tabCode = New System.Windows.Forms.TabPage()
+        Me.txtCode = New Alsing.Windows.Forms.SyntaxBoxControl()
+        Me.SyntaxDocument1 = New Alsing.SourceCode.SyntaxDocument(Me.components)
+        Me.tabSystem = New System.Windows.Forms.TabPage()
+        Me.txtLog = New System.Windows.Forms.RichTextBox()
         Me.mnuList.SuspendLayout()
         Me.barStatus.SuspendLayout()
-        Me.MenuStrip1.SuspendLayout()
-        Me.ToolStripContainer1.BottomToolStripPanel.SuspendLayout()
-        Me.ToolStripContainer1.ContentPanel.SuspendLayout()
-        Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
-        Me.ToolStripContainer1.SuspendLayout()
+        Me.mnuMain.SuspendLayout()
+        Me.toolMain.BottomToolStripPanel.SuspendLayout()
+        Me.toolMain.ContentPanel.SuspendLayout()
+        Me.toolMain.TopToolStripPanel.SuspendLayout()
+        Me.toolMain.SuspendLayout()
+        Me.splitMain.Panel1.SuspendLayout()
+        Me.splitMain.Panel2.SuspendLayout()
+        Me.splitMain.SuspendLayout()
+        Me.tabMain.SuspendLayout()
+        Me.tabCode.SuspendLayout()
+        Me.tabSystem.SuspendLayout()
         Me.SuspendLayout()
         '
         'lstFiles
         '
-        Me.lstFiles.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lstFiles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lstFiles.ContextMenuStrip = Me.mnuList
         Me.lstFiles.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lstFiles.FormattingEnabled = True
         Me.lstFiles.Location = New System.Drawing.Point(0, 0)
         Me.lstFiles.Name = "lstFiles"
         Me.lstFiles.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended
-        Me.lstFiles.Size = New System.Drawing.Size(593, 375)
+        Me.lstFiles.Size = New System.Drawing.Size(205, 375)
         Me.lstFiles.TabIndex = 0
         '
         'mnuList
@@ -85,18 +99,18 @@ Partial Class frmMain
         'RemoveToolStripMenuItem
         '
         Me.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem"
-        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.RemoveToolStripMenuItem.Text = "&Remove"
         '
         'ToolStripMenuItem3
         '
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(119, 6)
         '
         'AddFilesToolStripMenuItem
         '
         Me.AddFilesToolStripMenuItem.Name = "AddFilesToolStripMenuItem"
-        Me.AddFilesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AddFilesToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.AddFilesToolStripMenuItem.Text = "&Add Files"
         '
         'EditeFileToolStripMenuItem
@@ -108,12 +122,12 @@ Partial Class frmMain
         'ToolStripMenuItem4
         '
         Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(119, 6)
         '
         'AboutToolStripMenuItem1
         '
         Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
-        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(122, 22)
         Me.AboutToolStripMenuItem1.Text = "&About"
         '
         'barStatus
@@ -132,15 +146,15 @@ Partial Class frmMain
         Me.lblStatus.Size = New System.Drawing.Size(60, 17)
         Me.lblStatus.Text = "[lblStatus]"
         '
-        'MenuStrip1
+        'mnuMain
         '
-        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(593, 24)
-        Me.MenuStrip1.TabIndex = 11
-        Me.MenuStrip1.Text = "mnuMain"
+        Me.mnuMain.Dock = System.Windows.Forms.DockStyle.None
+        Me.mnuMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.mnuMain.Location = New System.Drawing.Point(0, 0)
+        Me.mnuMain.Name = "mnuMain"
+        Me.mnuMain.Size = New System.Drawing.Size(593, 24)
+        Me.mnuMain.TabIndex = 11
+        Me.mnuMain.Text = "mnuMain"
         '
         'FileToolStripMenuItem
         '
@@ -203,7 +217,7 @@ Partial Class frmMain
         '
         'ToolsToolStripMenuItem
         '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CompileToolStripMenuItem, Me.SimulateToolStripMenuItem, Me.ShowWaveToolStripMenuItem, Me.ToolStripMenuItem7, Me.ChangeWorkingDirectoryToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CompileToolStripMenuItem, Me.SimulateToolStripMenuItem, Me.ShowWaveToolStripMenuItem, Me.ToolStripMenuItem7, Me.ChangeWorkingDirectoryToolStripMenuItem, Me.ClearLogToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
         Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.ToolsToolStripMenuItem.Text = "&Tools"
@@ -212,33 +226,43 @@ Partial Class frmMain
         '
         Me.CompileToolStripMenuItem.Name = "CompileToolStripMenuItem"
         Me.CompileToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F9
-        Me.CompileToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
+        Me.CompileToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
         Me.CompileToolStripMenuItem.Text = "&Compile"
         '
         'SimulateToolStripMenuItem
         '
         Me.SimulateToolStripMenuItem.Name = "SimulateToolStripMenuItem"
         Me.SimulateToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
-        Me.SimulateToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
+        Me.SimulateToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
         Me.SimulateToolStripMenuItem.Text = "&Simulate"
         '
         'ShowWaveToolStripMenuItem
         '
         Me.ShowWaveToolStripMenuItem.Name = "ShowWaveToolStripMenuItem"
         Me.ShowWaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F5), System.Windows.Forms.Keys)
-        Me.ShowWaveToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
-        Me.ShowWaveToolStripMenuItem.Text = "&Show Wave"
+        Me.ShowWaveToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.ShowWaveToolStripMenuItem.Text = "Show Wa&ve"
         '
         'ToolStripMenuItem7
         '
         Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
-        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(211, 6)
+        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(285, 6)
         '
         'ChangeWorkingDirectoryToolStripMenuItem
         '
         Me.ChangeWorkingDirectoryToolStripMenuItem.Name = "ChangeWorkingDirectoryToolStripMenuItem"
-        Me.ChangeWorkingDirectoryToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
-        Me.ChangeWorkingDirectoryToolStripMenuItem.Text = "&Change Working Directory"
+        Me.ChangeWorkingDirectoryToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+                    Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
+        Me.ChangeWorkingDirectoryToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.ChangeWorkingDirectoryToolStripMenuItem.Text = "Change &Working Directory"
+        '
+        'ClearLogToolStripMenuItem
+        '
+        Me.ClearLogToolStripMenuItem.Name = "ClearLogToolStripMenuItem"
+        Me.ClearLogToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+                    Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
+        Me.ClearLogToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
+        Me.ClearLogToolStripMenuItem.Text = "Clear &Log"
         '
         'HelpToolStripMenuItem
         '
@@ -265,53 +289,158 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AboutToolStripMenuItem.Text = "&About"
         '
-        'ToolStripContainer1
+        'toolMain
         '
         '
-        'ToolStripContainer1.BottomToolStripPanel
+        'toolMain.BottomToolStripPanel
         '
-        Me.ToolStripContainer1.BottomToolStripPanel.Controls.Add(Me.barStatus)
+        Me.toolMain.BottomToolStripPanel.Controls.Add(Me.barStatus)
         '
-        'ToolStripContainer1.ContentPanel
+        'toolMain.ContentPanel
         '
-        Me.ToolStripContainer1.ContentPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.lstFiles)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(593, 375)
-        Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStripContainer1.Name = "ToolStripContainer1"
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(593, 421)
-        Me.ToolStripContainer1.TabIndex = 12
-        Me.ToolStripContainer1.Text = "ToolStripContainer1"
+        Me.toolMain.ContentPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.toolMain.ContentPanel.Controls.Add(Me.splitMain)
+        Me.toolMain.ContentPanel.Size = New System.Drawing.Size(593, 375)
+        Me.toolMain.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.toolMain.Location = New System.Drawing.Point(0, 0)
+        Me.toolMain.Name = "toolMain"
+        Me.toolMain.Size = New System.Drawing.Size(593, 421)
+        Me.toolMain.TabIndex = 12
+        Me.toolMain.Text = "ToolStripContainer1"
         '
-        'ToolStripContainer1.TopToolStripPanel
+        'toolMain.TopToolStripPanel
         '
-        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.MenuStrip1)
+        Me.toolMain.TopToolStripPanel.Controls.Add(Me.mnuMain)
+        '
+        'splitMain
+        '
+        Me.splitMain.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.splitMain.Location = New System.Drawing.Point(0, 0)
+        Me.splitMain.Name = "splitMain"
+        '
+        'splitMain.Panel1
+        '
+        Me.splitMain.Panel1.Controls.Add(Me.lstFiles)
+        '
+        'splitMain.Panel2
+        '
+        Me.splitMain.Panel2.Controls.Add(Me.tabMain)
+        Me.splitMain.Size = New System.Drawing.Size(593, 375)
+        Me.splitMain.SplitterDistance = 205
+        Me.splitMain.TabIndex = 2
+        '
+        'tabMain
+        '
+        Me.tabMain.Controls.Add(Me.tabCode)
+        Me.tabMain.Controls.Add(Me.tabSystem)
+        Me.tabMain.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tabMain.Location = New System.Drawing.Point(0, 0)
+        Me.tabMain.Name = "tabMain"
+        Me.tabMain.SelectedIndex = 0
+        Me.tabMain.Size = New System.Drawing.Size(384, 375)
+        Me.tabMain.TabIndex = 3
+        '
+        'tabCode
+        '
+        Me.tabCode.Controls.Add(Me.txtCode)
+        Me.tabCode.Location = New System.Drawing.Point(4, 22)
+        Me.tabCode.Name = "tabCode"
+        Me.tabCode.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabCode.Size = New System.Drawing.Size(376, 349)
+        Me.tabCode.TabIndex = 0
+        Me.tabCode.Text = "File"
+        Me.tabCode.UseVisualStyleBackColor = True
+        '
+        'txtCode
+        '
+        Me.txtCode.ActiveView = Alsing.Windows.Forms.ActiveView.BottomRight
+        Me.txtCode.AutoListPosition = Nothing
+        Me.txtCode.AutoListSelectedText = "a123"
+        Me.txtCode.AutoListVisible = False
+        Me.txtCode.BackColor = System.Drawing.Color.White
+        Me.txtCode.BorderStyle = Alsing.Windows.Forms.BorderStyle.None
+        Me.txtCode.CopyAsRTF = False
+        Me.txtCode.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtCode.Document = Me.SyntaxDocument1
+        Me.txtCode.FontName = "Courier new"
+        Me.txtCode.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.txtCode.InfoTipCount = 1
+        Me.txtCode.InfoTipPosition = Nothing
+        Me.txtCode.InfoTipSelectedIndex = 1
+        Me.txtCode.InfoTipVisible = False
+        Me.txtCode.Location = New System.Drawing.Point(3, 3)
+        Me.txtCode.LockCursorUpdate = False
+        Me.txtCode.Name = "txtCode"
+        Me.txtCode.ReadOnly = True
+        Me.txtCode.ShowScopeIndicator = False
+        Me.txtCode.Size = New System.Drawing.Size(370, 343)
+        Me.txtCode.SmoothScroll = False
+        Me.txtCode.SplitviewH = -4
+        Me.txtCode.SplitviewV = -4
+        Me.txtCode.TabGuideColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.txtCode.TabIndex = 0
+        Me.txtCode.Text = "SyntaxBoxControl1"
+        Me.txtCode.WhitespaceColor = System.Drawing.SystemColors.ControlDark
+        '
+        'SyntaxDocument1
+        '
+        Me.SyntaxDocument1.Lines = New String() {""}
+        Me.SyntaxDocument1.MaxUndoBufferSize = 1000
+        Me.SyntaxDocument1.Modified = False
+        Me.SyntaxDocument1.UndoStep = 0
+        '
+        'tabSystem
+        '
+        Me.tabSystem.Controls.Add(Me.txtLog)
+        Me.tabSystem.Location = New System.Drawing.Point(4, 22)
+        Me.tabSystem.Name = "tabSystem"
+        Me.tabSystem.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabSystem.Size = New System.Drawing.Size(376, 349)
+        Me.tabSystem.TabIndex = 1
+        Me.tabSystem.Text = "Log"
+        Me.tabSystem.UseVisualStyleBackColor = True
+        '
+        'txtLog
+        '
+        Me.txtLog.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtLog.Font = New System.Drawing.Font("Courier New", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLog.Location = New System.Drawing.Point(3, 3)
+        Me.txtLog.Name = "txtLog"
+        Me.txtLog.ReadOnly = True
+        Me.txtLog.Size = New System.Drawing.Size(370, 343)
+        Me.txtLog.TabIndex = 0
+        Me.txtLog.Text = ""
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(593, 421)
-        Me.Controls.Add(Me.ToolStripContainer1)
+        Me.Controls.Add(Me.toolMain)
         Me.HelpButton = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MainMenuStrip = Me.MenuStrip1
+        Me.MainMenuStrip = Me.mnuMain
         Me.MinimumSize = New System.Drawing.Size(609, 413)
         Me.Name = "frmMain"
         Me.Text = "jVerilog"
         Me.mnuList.ResumeLayout(False)
         Me.barStatus.ResumeLayout(False)
         Me.barStatus.PerformLayout()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
-        Me.ToolStripContainer1.BottomToolStripPanel.ResumeLayout(False)
-        Me.ToolStripContainer1.BottomToolStripPanel.PerformLayout()
-        Me.ToolStripContainer1.ContentPanel.ResumeLayout(False)
-        Me.ToolStripContainer1.TopToolStripPanel.ResumeLayout(False)
-        Me.ToolStripContainer1.TopToolStripPanel.PerformLayout()
-        Me.ToolStripContainer1.ResumeLayout(False)
-        Me.ToolStripContainer1.PerformLayout()
+        Me.mnuMain.ResumeLayout(False)
+        Me.mnuMain.PerformLayout()
+        Me.toolMain.BottomToolStripPanel.ResumeLayout(False)
+        Me.toolMain.BottomToolStripPanel.PerformLayout()
+        Me.toolMain.ContentPanel.ResumeLayout(False)
+        Me.toolMain.TopToolStripPanel.ResumeLayout(False)
+        Me.toolMain.TopToolStripPanel.PerformLayout()
+        Me.toolMain.ResumeLayout(False)
+        Me.toolMain.PerformLayout()
+        Me.splitMain.Panel1.ResumeLayout(False)
+        Me.splitMain.Panel2.ResumeLayout(False)
+        Me.splitMain.ResumeLayout(False)
+        Me.tabMain.ResumeLayout(False)
+        Me.tabCode.ResumeLayout(False)
+        Me.tabSystem.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -325,7 +454,7 @@ Partial Class frmMain
     Friend WithEvents EditeFileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents AboutToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents mnuMain As System.Windows.Forms.MenuStrip
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NewProjectToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NewFileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -345,6 +474,14 @@ Partial Class frmMain
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem7 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ChangeWorkingDirectoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripContainer1 As System.Windows.Forms.ToolStripContainer
+    Friend WithEvents toolMain As System.Windows.Forms.ToolStripContainer
+    Friend WithEvents splitMain As System.Windows.Forms.SplitContainer
+    Friend WithEvents tabMain As System.Windows.Forms.TabControl
+    Friend WithEvents tabCode As System.Windows.Forms.TabPage
+    Friend WithEvents tabSystem As System.Windows.Forms.TabPage
+    Friend WithEvents ClearLogToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents txtLog As System.Windows.Forms.RichTextBox
+    Friend WithEvents txtCode As Alsing.Windows.Forms.SyntaxBoxControl
+    Friend WithEvents SyntaxDocument1 As Alsing.SourceCode.SyntaxDocument
 
 End Class

@@ -146,6 +146,12 @@
   <ItemGroup>
     <Content Include="ram.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Alsing.SyntaxBox\Alsing.SyntaxBox.NET.csproj">
+      <Project>{19EF75B2-B414-4EB0-9486-160FAF93E62C}</Project>
+      <Name>Alsing.SyntaxBox.NET</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

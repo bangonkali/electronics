@@ -78,6 +78,6 @@ module compliment_tb;
 		#20 x = 0;
 		#20 x = 1;
 		
-		$finish
+		$finish;
 	end
 endmodule

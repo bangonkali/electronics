@@ -5,6 +5,9 @@ Public Class frmMain
     Private strPreviousOutput As String = ""
     Private strPreviousVVPInput As String = ""
     Private currDirectory As String = ""
+    Private strPath As String = ""
+
+    Private prevError As Boolean = False
 
     Private Sub AddFile()
         Dim filesAdded As Integer = 0
@@ -66,6 +69,34 @@ Public Class frmMain
 
         If My.Settings.Files Is Nothing Then
             My.Settings.Files = New Specialized.StringCollection
+        End If
+
+        GetInstallPath()
+    End Sub
+
+    Public Sub GetInstallPath()
+        ' This part gets where jVerilog is installed http://j.mp/q3kgDV
+        Dim regKey As Microsoft.Win32.RegistryKey
+        Dim path As String = ""
+        Dim success As Boolean = True
+
+        regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\jVerilog", False)
+
+        Try
+            path = CStr(regKey.GetValue(""))
+        Catch ex As Exception
+            Debug.WriteLine("Error: " & ex.Message)
+            MsgBox("Was unable to get where iVerilog was installed. I give up! :(", CType(vbOKOnly + vbExclamation, MsgBoxStyle), "Error")
+            success = False
+        End Try
+
+        regKey.Close()
+
+        If Not success Then
+            Application.Exit()
+        Else
+            strPath = path
+            Debug.WriteLine("Install Path: " & strPath)
         End If
     End Sub
 
@@ -147,10 +178,15 @@ Public Class frmMain
             Return
         End If
 
-        If isDirty = False Then
+        If isDirty = False Or prevError = True Then
+
+            If prevError Then
+                MsgBox("The previous compilation encountered errors, please view log for more information.")
+                tabMain.SelectedTab = tabSystem
+            End If
+
             If My.Computer.FileSystem.FileExists(strPreviousOutput) Then
                 Simulate(strPreviousOutput)
-
             End If
         Else
             Dim dlgOpen As New OpenFileDialog
@@ -196,11 +232,49 @@ Public Class frmMain
             strFiles += """" & file & """ "
         Next
 
-        Dim strCommand As String = "iVerilog -o """ & strOutput & """ " & strFiles
+        Dim strCommand As String = strPath & "\bin\iVerilog.exe"
         Debug.WriteLine(strCommand)
 
-        Dim proc As Integer = Shell(strCommand, AppWinStyle.NormalFocus, False)
-        lblStatus.Text = "Compiler process ID " & proc & "."
+        ' Set start information. http://j.mp/q8Mvvv
+        Dim start_info As New ProcessStartInfo(strCommand)
+        start_info.UseShellExecute = False
+        start_info.CreateNoWindow = True
+        start_info.RedirectStandardOutput = True
+        start_info.RedirectStandardError = True
+        start_info.Arguments = "-o """ & strOutput & """ " & strFiles
+
+        ' Make the process and set its start information.
+        Dim proc As New Process()
+        proc.StartInfo = start_info
+
+        ' Start the process.
+        proc.Start()
+
+        ' Attach to stdout and stderr.
+        Dim std_out As IO.StreamReader = proc.StandardOutput()
+        Dim std_err As IO.StreamReader = proc.StandardError()
+
+        ' Display the results.
+        Dim stdOut As String = std_out.ReadToEnd()
+        Dim stdErr As String = std_err.ReadToEnd()
+
+        ' Clean up.
+        std_out.Close()
+        std_err.Close()
+        proc.Close()
+
+        Debug.WriteLine("stdOut: " & stdOut)
+        Debug.WriteLine("stdErr: " & stdErr)
+
+        tabMain.SelectedTab = tabSystem
+
+        If stdErr.Length > 0 Then
+            txtLog.Text &= CStr(Now) & " Error: " & vbCrLf & stdErr & vbCrLf
+            lblStatus.Text = "Error: Errors were encoutered during compilation. :("
+        Else
+            txtLog.Text &= CStr(Now) & " Success: " & vbCrLf & "Output " & strOutput & "." & vbCrLf
+            lblStatus.Text = "Success: Compilation completed without errors! ^_^'"
+        End If
     End Sub
 
     Private Sub Simulate(ByVal VVPInput As String)
@@ -263,6 +337,9 @@ Public Class frmMain
 
     Private Sub frmMain_Shown(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Shown
         UpdateCurrentDirectory()
+
+        ' tabMain.SelectedTab = tabSystem
+        ' txtLog.Rtf = "{\rtf1\ansi{\fonttbl\f0\fCourier New;}\f0\pard This is some {\b bold} text.\par}" & vbCrLf
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutToolStripMenuItem.Click
@@ -333,4 +410,21 @@ Public Class frmMain
     Private Sub HelpToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HelpToolStripMenuItem1.Click
         DeveloperNotice()
     End Sub
+
+    Private Sub ClearLogToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClearLogToolStripMenuItem.Click
+        InitiateClearLog()
+    End Sub
+
+    Public Sub InitiateClearLog()
+        txtLog.Text = ""
+    End Sub
+
+    Private Sub lstFiles_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstFiles.SelectedIndexChanged
+        If lstFiles.SelectedItems.Count > 0 Then
+            Dim streamReader As New IO.StreamReader(lstFiles.SelectedItem.ToString)
+            txtCode.Document.Text = streamReader.ReadToEnd
+            tabMain.SelectedTab = tabCode
+        End If
+    End Sub
+
 End Class

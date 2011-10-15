@@ -12,3 +12,5 @@ C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Debug\jVeril
 C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\bin\Debug\jVerilog.exe.config
 C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Debug\jVerilog.frmAbout.resources
 C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\obj\x86\Debug\jVerilog.frmNewProject.resources
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\bin\Debug\Puzzle.SyntaxBox.NET3.5.dll
+C:\Users\Bangonkali\Documents\Project\tls\jVerilog\jVerilog\bin\Debug\Puzzle.SyntaxBox.NET3.5.pdb
