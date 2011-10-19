@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Bangonkali/Desktop/FSM/xilinx_simpsons/simpsons/simpsons_sensor_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="simpsons_sensor_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="/simpsons_sensor_tb/LEVEL" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">LEVEL[1:0]</obj_property>
+      <obj_property name="ObjectShortName">LEVEL[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simpsons_sensor_tb/G" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">G[1:0]</obj_property>
+      <obj_property name="ObjectShortName">G[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simpsons_sensor_tb/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simpsons_sensor_tb/RESET" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
+</wave_config>

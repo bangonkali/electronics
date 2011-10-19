@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "C:/Users/Bangonkali/Desktop/FSM/xilinx_simpsons/simpsons/simpsons_sensor.xst" -ofn "C:/Users/Bangonkali/Desktop/FSM/xilinx_simpsons/simpsons/simpsons_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a30t-csg324-3 simpsons_sensor.ngc simpsons_sensor.ngd  
+map -intstyle ise -p xc7a30t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o simpsons_sensor_map.ncd simpsons_sensor.ngd simpsons_sensor.pcf 

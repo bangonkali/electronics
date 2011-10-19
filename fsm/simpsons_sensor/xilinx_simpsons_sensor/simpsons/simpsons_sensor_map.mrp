@@ -1,0 +1,34 @@
+Release 13.2 Map O.61xd (nt)
+Xilinx Mapping Report File for Design 'simpsons_sensor'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc7a30t-csg324-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off
+-power off -o simpsons_sensor_map.ncd simpsons_sensor.ngd simpsons_sensor.pcf 
+Target Device  : xc7a30t
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : artix7 -- $Revision: 1.55 $
+Mapped Date    : Wed Oct 19 21:30:21 2011
+
+Design Summary
+--------------
+Number of errors   :   1
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:Security:11 - No 'xc7a30t' feature was available for 'ISE'.
+ERROR:Map:258 - A problem was encountered attempting to get the license for this
+   architecture. 
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:Security:54 - 'xc7a30t' is a Beta WebPack part.
+INFO:Security:61 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:63 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:68 - Please run the Xilinx License Configuration Manager

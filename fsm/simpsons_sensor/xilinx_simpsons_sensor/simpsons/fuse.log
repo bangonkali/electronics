@@ -1,0 +1,21 @@
+Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Bangonkali/Desktop/FSM/xilinx_simpsons/simpsons/simpsons_sensor_tb_isim_beh.exe -prj C:/Users/Bangonkali/Desktop/FSM/xilinx_simpsons/simpsons/simpsons_sensor_tb_beh.prj work.simpsons_sensor_tb work.glbl 
+ISim O.61xd (signature 0x6dd86d03)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Analyzing Verilog file \"C:/Users/Bangonkali/Desktop/FSM/xilinx_simpsons/simpsons/simpsons_sensor.v\" into library work
+Analyzing Verilog file \"C:/Users/Bangonkali/Desktop/FSM/xilinx_simpsons/simpsons/simpsons_sensor_tb.v\" into library work
+Analyzing Verilog file \"C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v\" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 98040 KB
+Fuse CPU Usage: 170 ms
+Compiling module simpsons_sensor
+Compiling module simpsons_sensor_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 3 Verilog Units
+Built simulation executable C:/Users/Bangonkali/Desktop/FSM/xilinx_simpsons/simpsons/simpsons_sensor_tb_isim_beh.exe
+Fuse Memory Usage: 102628 KB
+Fuse CPU Usage: 280 ms

@@ -1,0 +1,23 @@
+ISim log file
+Running: C:\Users\Bangonkali\Desktop\FSM\xilinx_simpsons\simpsons\simpsons_sensor_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Bangonkali/Desktop/FSM/xilinx_simpsons/simpsons/simpsons_sensor_tb_isim_beh.wdb 
+ISim O.61xd (signature 0x6dd86d03)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Bart Enters: LEVEL = 1
+Bart Leaves: LEVEL = 0
+Homer Enters: LEVEL = 2
+Homer Leaves: LEVEL = 0
+Bart Enters: LEVEL = 1
+Homer Enters: LEVEL = 3
+Homer Leaves: LEVEL = 1
+Homer Enters: LEVEL = 3
+Bart Leaves: LEVEL = 2
+Bart Enters: LEVEL = 3
+Homer Leaves: LEVEL = 1
+Bart Leaves: LEVEL = 0
+Stopped at time : 244 ns : File "C:/Users/Bangonkali/Desktop/FSM/xilinx_simpsons/simpsons/simpsons_sensor_tb.v" Line 126
