@@ -10,7 +10,7 @@
 // Project Name: simpsons
 // Target Devices: 
 // Tool versions: 
-// Description: For more information, visit http://goo.gl/Ig6l4
+// Description: For more information, visit http://bit.ly/oJQp6I
 //
 // Dependencies: None
 //
@@ -18,7 +18,7 @@
 // Revision 0.01 - File Created
 // Additional Comments: =P
 //
-// Repository  : at github http://goo.gl/0TyRj
+// Repository  : at github http://bit.ly/oJQp6I
 //
 //////////////////////////////////////////////////////////////////////////////////
 
