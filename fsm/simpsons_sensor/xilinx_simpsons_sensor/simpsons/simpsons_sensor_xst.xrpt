@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Wed Oct 19 21:29:56 2011">
+  <application stringID="Xst" timeStamp="Sat Oct 22 21:05:09 2011">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\13.2\ISE_DS\ISE\\lib\nt;C:\Xilinx\13.2\ISE_DS\ISE\\bin\nt;C:\Xilinx\13.2\ISE_DS\PlanAhead\bin;C:\Xilinx\13.2\ISE_DS\ISE\bin\nt;C:\Xilinx\13.2\ISE_DS\ISE\lib\nt;C:\Xilinx\13.2\ISE_DS\EDK\bin\nt;C:\Xilinx\13.2\ISE_DS\EDK\lib\nt;C:\Xilinx\13.2\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\13.2\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\13.2\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\13.2\ISE_DS\common\bin\nt;C:\Xilinx\13.2\ISE_DS\common\lib\nt;C:\Program Files\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\MATLAB\R2010b\runtime\win32;C:\Program Files\MATLAB\R2010b\bin;C:\Program Files\Notepad++;C:\Program Files\TortoiseHg\;C:\Program Files\TortoiseGit\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files\jVerilog\bin;C:\Program Files\NodeJS"/>
+          <item stringID="value" value="C:\Xilinx\13.2\ISE_DS\ISE\\lib\nt;C:\Xilinx\13.2\ISE_DS\ISE\\bin\nt;C:\Xilinx\13.2\ISE_DS\PlanAhead\bin;C:\Xilinx\13.2\ISE_DS\ISE\bin\nt;C:\Xilinx\13.2\ISE_DS\ISE\lib\nt;C:\Xilinx\13.2\ISE_DS\EDK\bin\nt;C:\Xilinx\13.2\ISE_DS\EDK\lib\nt;C:\Xilinx\13.2\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\13.2\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\13.2\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\13.2\ISE_DS\common\bin\nt;C:\Xilinx\13.2\ISE_DS\common\lib\nt;C:\Program Files\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\MATLAB\R2010b\runtime\win32;C:\Program Files\MATLAB\R2010b\bin;C:\Program Files\Notepad++;C:\Program Files\TortoiseHg\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files\jVerilog\bin;C:\Program Files\NodeJS;C:\Program Files\TortoiseGit\bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -45,7 +45,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="Intel(R) Core(TM)2 Duo CPU     E4500  @ 2.20GHz"/>
-          <item stringID="speed" value="2199 MHz"/>
+          <item stringID="speed" value="2200 MHz"/>
         </row>
       </table>
     </section>

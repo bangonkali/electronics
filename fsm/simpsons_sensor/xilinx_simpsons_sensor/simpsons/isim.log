@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\Bangonkali\Desktop\FSM\xilinx_simpsons\simpsons\simpsons_sensor_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Bangonkali/Desktop/FSM/xilinx_simpsons/simpsons/simpsons_sensor_tb_isim_beh.wdb 
+Running: C:\Users\Bangonkali\Documents\Project\electronics\fsm\simpsons_sensor\xilinx_simpsons_sensor\simpsons\simpsons_sensor_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Bangonkali/Documents/Project/electronics/fsm/simpsons_sensor/xilinx_simpsons_sensor/simpsons/simpsons_sensor_tb_isim_beh.wdb 
 ISim O.61xd (signature 0x6dd86d03)
 This is a Full version of ISim.
 Time resolution is 1 ps
@@ -12,6 +12,16 @@ Bart Enters: LEVEL = 1
 Bart Leaves: LEVEL = 0
 Homer Enters: LEVEL = 2
 Homer Leaves: LEVEL = 0
+Homer Enters: LEVEL = 2
+But this time, both G1 and G0 are emitting 1
+after an initial G0 of 1. Which basically means
+head first, then both his head and lower body is
+being detected by the sensor as he's entering
+Homer Leaves: LEVEL = 0
+But this time, both G1 and G0 are emitting 1
+after an initial G0 of 1. Which basically means
+head first, then both his head and lower body is
+being detected by the sensor as he's exiting
 Bart Enters: LEVEL = 1
 Homer Enters: LEVEL = 3
 Homer Leaves: LEVEL = 1
@@ -20,4 +30,12 @@ Bart Leaves: LEVEL = 2
 Bart Enters: LEVEL = 3
 Homer Leaves: LEVEL = 1
 Bart Leaves: LEVEL = 0
-Stopped at time : 244 ns : File "C:/Users/Bangonkali/Desktop/FSM/xilinx_simpsons/simpsons/simpsons_sensor_tb.v" Line 126
+This shows the reset capability.
+Homer Enters: LEVEL = 2
+The device's reset is pressed.
+The device's reset is unpressed.
+Current LEVEL: LEVEL = 0
+Homer Enters: LEVEL = 2
+Homer Leaves: LEVEL = 0
+End of simulation: LEVEL = 0
+Stopped at time : 328 ns : File "C:/Users/Bangonkali/Documents/Project/electronics/fsm/simpsons_sensor/xilinx_simpsons_sensor/simpsons/simpsons_sensor_tb.v" Line 188

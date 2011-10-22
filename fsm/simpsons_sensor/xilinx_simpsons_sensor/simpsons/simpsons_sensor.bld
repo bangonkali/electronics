@@ -6,8 +6,8 @@ ise -dd _ngo -nt timestamp -i -p xc7a30t-csg324-3 simpsons_sensor.ngc
 simpsons_sensor.ngd
 
 Reading NGO file
-"C:/Users/Bangonkali/Desktop/FSM/xilinx_simpsons/simpsons/simpsons_sensor.ngc"
-...
+"C:/Users/Bangonkali/Documents/Project/electronics/fsm/simpsons_sensor/xilinx_si
+mpsons_sensor/simpsons/simpsons_sensor.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -28,10 +28,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 129764 kilobytes
+Total memory usage is 129444 kilobytes
 
 Writing NGD file "simpsons_sensor.ngd" ...
-Total REAL time to NGDBUILD completion:  7 sec
+Total REAL time to NGDBUILD completion:  10 sec
 Total CPU time to NGDBUILD completion:   6 sec
 
 Writing NGDBUILD log file "simpsons_sensor.bld"...

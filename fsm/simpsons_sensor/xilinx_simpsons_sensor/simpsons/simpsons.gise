@@ -40,6 +40,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="simpsons_sensor.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="simpsons_sensor.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="simpsons_sensor.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="simpsons_sensor_envsettings.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="simpsons_sensor_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="simpsons_sensor_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="simpsons_sensor_ngdbuild.xrpt"/>
@@ -62,8 +63,9 @@
     </transform>
     <transform xil_pn:end_ts="1319030911" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1319030911">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1319035910" xil_pn:in_ck="-4412919357697325177" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1319035910">
+    <transform xil_pn:end_ts="1319289290" xil_pn:in_ck="-4412919357697325177" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1319289290">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="simpsons_sensor.v"/>
@@ -81,13 +83,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1319035910" xil_pn:in_ck="-4412919357697325177" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1319035910">
+    <transform xil_pn:end_ts="1319289292" xil_pn:in_ck="-4412919357697325177" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1319289292">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="simpsons_sensor.v"/>
       <outfile xil_pn:name="simpsons_sensor_tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1319035913" xil_pn:in_ck="-4412919357697325177" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7829696090763266671" xil_pn:start_ts="1319035910">
+    <transform xil_pn:end_ts="1319289295" xil_pn:in_ck="-4412919357697325177" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7829696090763266671" xil_pn:start_ts="1319289292">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -99,7 +101,7 @@
       <outfile xil_pn:name="simpsons_sensor_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1319036264" xil_pn:in_ck="-2648555462391980999" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5493211803141849964" xil_pn:start_ts="1319036264">
+    <transform xil_pn:end_ts="1319289295" xil_pn:in_ck="-2648555462391980999" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5493211803141849964" xil_pn:start_ts="1319289295">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -110,6 +112,7 @@
     </transform>
     <transform xil_pn:end_ts="1319030992" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1319030992">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1319030992" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="4150048116457158986" xil_pn:start_ts="1319030992">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -135,7 +138,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1319031009" xil_pn:in_ck="-5036168398700175303" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="1306115860868831777" xil_pn:start_ts="1319030992">
+    <transform xil_pn:end_ts="1319288734" xil_pn:in_ck="-5036168398700175303" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="1306115860868831777" xil_pn:start_ts="1319288703">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -161,7 +164,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1319031019" xil_pn:in_ck="-5704396292754080229" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="145350465174630837" xil_pn:start_ts="1319031009">
+    <transform xil_pn:end_ts="1319288749" xil_pn:in_ck="-5704396292754080229" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="145350465174630837" xil_pn:start_ts="1319288734">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
@@ -171,7 +174,7 @@
       <outfile xil_pn:name="simpsons_sensor.ngd"/>
       <outfile xil_pn:name="simpsons_sensor_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1319031034" xil_pn:in_ck="-5704396292754080228" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="-3367630453216653825" xil_pn:start_ts="1319031019">
+    <transform xil_pn:end_ts="1319288771" xil_pn:in_ck="-5704396292754080228" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="-3367630453216653825" xil_pn:start_ts="1319288749">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>

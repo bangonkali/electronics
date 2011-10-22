@@ -2,14 +2,14 @@ Command line:
    simpsons_sensor_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  6648
+     -socket  2732
 
-Wed Oct 19 22:57:46 2011
+Sat Oct 22 21:14:57 2011
 
 
  Elaboration Time: 0.0936 sec
 
- Current Memory Usage: 501.166 Meg
+ Current Memory Usage: 501.039 Meg
 
  Total Signals          : 16
  Total Nets             : 18
@@ -17,12 +17,12 @@ Wed Oct 19 22:57:46 2011
  Total Blocks           : 3
  Total Primitive Blocks : 2
  Total Processes        : 13
- Total Traceable Variables  : 46
- Total Scalar Nets and Variables : 846
+ Total Traceable Variables  : 47
+ Total Scalar Nets and Variables : 878
 
- Total Simulation Time: 0.0936 sec
+ Total Simulation Time: 0.1092 sec
 
- Current Memory Usage: 501.166 Meg
+ Current Memory Usage: 501.039 Meg
 
-Wed Oct 19 22:59:59 2011
+Sat Oct 22 22:12:26 2011
 

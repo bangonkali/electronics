@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2011-10-19T21:16:55</DateModified>
+  <DateModified>2011-10-22T20:45:56</DateModified>
   <ModuleName>simpsons_sensor</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Bangonkali/Desktop/FSM/xilinx_simpsons/simpsons/iseconfig/simpsons_sensor.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Bangonkali/Desktop/FSM/xilinx_simpsons/simpsons</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Bangonkali/Documents/Project/electronics/fsm/simpsons_sensor/xilinx_simpsons_sensor/simpsons/iseconfig/simpsons_sensor.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Bangonkali/Documents/Project/electronics/fsm/simpsons_sensor/xilinx_simpsons_sensor/simpsons\</ImplementationReportsDirectory>
   <DateInitialized>2011-10-19T21:16:55</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

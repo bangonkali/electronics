@@ -3,14 +3,14 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.29 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.62 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.29 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.63 secs
  
 --> Reading design: simpsons_sensor.prj
 
@@ -106,7 +106,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file \"C:\Users\Bangonkali\Desktop\FSM\xilinx_simpsons\simpsons\simpsons_sensor.v\" into library work
+Analyzing Verilog file \"C:\Users\Bangonkali\Documents\Project\electronics\fsm\simpsons_sensor\xilinx_simpsons_sensor\simpsons\simpsons_sensor.v\" into library work
 Parsing module <simpsons_sensor>.
 
 =========================================================================
@@ -120,7 +120,7 @@ Elaborating module <simpsons_sensor>.
 =========================================================================
 
 Synthesizing Unit <simpsons_sensor>.
-    Related source file is "c:/users/bangonkali/desktop/fsm/xilinx_simpsons/simpsons/simpsons_sensor.v".
+    Related source file is "c:/users/bangonkali/documents/project/electronics/fsm/simpsons_sensor/xilinx_simpsons_sensor/simpsons/simpsons_sensor.v".
         NONE = 0
         BART = 1
         HOMER = 2
@@ -418,12 +418,12 @@ CLK            |    1.579|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 12.05 secs
+Total REAL time to Xst completion: 26.00 secs
+Total CPU time to Xst completion: 26.03 secs
  
 --> 
 
-Total memory usage is 224048 kilobytes
+Total memory usage is 221296 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

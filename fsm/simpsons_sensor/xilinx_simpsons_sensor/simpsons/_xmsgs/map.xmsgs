@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="user_fatal" file="Map" num="258" delta="new" >A problem was encountered attempting to get the license for this architecture.
+<msg type="user_fatal" file="Map" num="258" delta="old" >A problem was encountered attempting to get the license for this architecture.
 </msg>
 
 </messages>
