@@ -1,0 +1,80 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+   
+   <title>EE 177 Exercise 3 - 555 Calculator</title>
+   
+   <script type="text/javascript" src="script.js"></script>
+   
+   <body>
+      <h1>EE 177 Exercise 3 - 555 Calculator</h1>
+      <p>Refer to this diagram for the circuit:</p><img src="http://upload.wikimedia.org/wikipedia/commons/3/3d/555_Astable_Diagram.svg" alt="If you can't see this, this was the circuit diagram for the Astable 555.">
+      <form id="form1" name="form1" method="post" action="">
+         <label for="txtFrequency">Desired Frequency</label>
+         <input type="text" name="txtFrequency" id="txtFrequency" />
+         <a href="#" name="btnCalculate" id="btnCalculate" onclick="getComponents(); return false;">Calculate</a>
+      </form>
+      <table width="100%" border="1" summary="The results of the iterative computation along with their percent differences from the desired and theoretical values." id="tblResutls">
+         <caption>
+          Computation Results for Desired Frequency: <span id="lblDesiredFrequency"></span>
+         </caption>
+        <tr>
+          <th scope="col">Description</th>
+          <th scope="col">Nearest Calculated</th>
+        </tr>
+        <tr>
+          <th scope="row">R1</th>
+          <td id="r1_nc">&nbsp;</td>
+        </tr>
+        <tr>
+          <th scope="row">R2</th>
+          <td id="r2_nc">&nbsp;</td>
+        </tr>
+        <tr>
+          <th scope="row">C</th>
+          <td id="c_nc">&nbsp;</td>
+        </tr>
+        <tr>
+          <th scope="row">Frequency</th>
+          <td id="f_nc">&nbsp;</td>
+        </tr>
+        <tr>
+          <th scope="row">High Time</th>
+          <td id="high_nc">&nbsp;</td>
+        </tr>
+        <tr>
+          <th scope="row">Low Time</th>
+          <td id="low_nc">&nbsp;</td>
+        </tr>
+        <tr>
+          <th scope="row">Period</th>
+          <td id="period_nc">&nbsp;</td>
+        </tr>
+        <tr>
+          <th scope="row">Duty Cycle</th>
+          <td id="dc_nc">&nbsp;</td>
+        </tr>
+      </table>
+      <p id='lblStatus'></p>
+      <p><strong>Problem Statement:</strong></p>
+         <p>EE 177 Activity #3 - http://j.mp/nrKk2T</p>
+      <p><strong>Relevant Links: </strong></p>
+      <ol>
+         <li>Real Capacitors Rating Ranges: http://j.mp/oRMxcC</li>
+         <li>Real Resistors Rating Ranges: http://j.mp/ru39dz</li>
+         <li>555 timer usage guide: http://j.mp/nKLKY0</li>
+      </ol>
+      <p><strong>Online calculators: </strong></p>
+      <ol>
+         <li>NE555 Astable Multivibrator Frequency and Duty Cycle Calculator  http://j.mp/nDFaDy</li>
+         <li>Astable 555 Square Wave Calculator http://j.mp/mWH3cx</li>
+      </ol>
+   </body>
+</html>

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1314388035 source:c:\users\bangonkali\desktop\astable\c\astable.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<string.h>
+
