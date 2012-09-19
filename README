@@ -1,13 +1,28 @@
 Electronic Projects Versioning Repo
 
 For more info: bangonkali@istoryahi.me
-Mobile: +639993192420
+Mobile: (globe)+639157764387
 
 adder
-	Some Verilog Code for Adders / Multipliers
+  Some Verilog Code for Adders / Multipliers
 
 complimenter
-	One input, one output serial 2's complementer.
+  One input, one output serial 2's complementer.
 
 tls
-	Traffic Light System
+  Traffic Light System
+
+astable_calculator
+	Calculator for the RC requirements to create an Astable 555 Timer.
+	Implemented in C, CPP, Javascript, Python and simulation using Circuit Wizard.
+
+electrical 
+	Several Spice codes used for EE 131 tutorials.
+
+fsm
+	Project in EE 177 (Simpson's Sensor)
+	Finite State Machine 
+	Verilog implementation
+
+jverilog
+	Verilog compiler IDE using iVerilog on the backend.
