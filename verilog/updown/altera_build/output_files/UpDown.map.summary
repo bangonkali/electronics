@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Dec 30 15:23:59 2012
+Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Web Edition
+Revision Name : UpDown
+Top-level Entity Name : UpDown
+Family : Cyclone II
+Total logic elements : 9
+    Total combinational functions : 9
+    Dedicated logic registers : 6
+Total registers : 6
+Total pins : 8
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

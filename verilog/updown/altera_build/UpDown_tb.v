@@ -1,0 +1,83 @@
+`timescale 1ns / 1ps
+
+////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer:  Bangon Kali
+//
+// Create Date:   11:31:31 12/19/2012
+// Design Name:   UpDownCounter
+// Module Name:   D:/ACADS/ECE 195/UpDownCounter/UpDownCounter_tb.v
+// Project Name:  UpDownCounter
+// Target Device:  
+// Tool versions:  
+// Description: 
+//
+// Verilog Test Fixture created by ISE for module: UpDownCounter
+//
+// Dependencies:
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+module UpDown_tb;
+
+	// Inputs
+	reg reset;
+	reg enable;
+	reg clk;
+
+	// Outputs
+	wire [4:0]count;
+
+	// Instantiate the Unit Under Test (UUT)
+	UpDown uut (
+		.reset(reset), 
+		.enable(enable), 
+		.clk(clk), 
+		.count(count)
+	);
+
+	initial begin
+		// Initialize Inputs
+		reset = 0;
+		enable = 0;
+		clk = 0;
+
+			// Initialize Inputs
+		clk = 0;
+		reset = 0;
+		enable = 0;
+
+		// Wait 100 ns for global reset to finish
+		#10;
+
+		reset = 1;
+		enable = 0;
+
+		#10;
+		reset = 0;
+		enable = 1;
+
+
+		#50 
+		reset = 1;
+		#10
+		enable = 0;
+		#30
+		enable = 1;
+		#50 
+		reset = 0;
+
+		#1000; 
+		$finish; // Finishes simulation after (#10000 + #Time_Before_it)
+	end
+
+	// Provide clock
+	always begin 
+		#10 clk = !clk;
+	end
+      
+endmodule

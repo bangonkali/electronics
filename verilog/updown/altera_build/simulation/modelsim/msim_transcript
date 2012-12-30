@@ -1,0 +1,60 @@
+# Reading E:/Program Files (x86)/Altera/12.1/modelsim/modelsim_ase/tcl/vsim/pref.tcl 
+# do UpDown_run_msim_gate_verilog.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying E:\Program Files (x86)\Altera\12.1\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied E:\Program Files (x86)\Altera\12.1\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+. {UpDown.vo}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module UpDown
+# 
+# Top level modules:
+# 	UpDown
+# 
+# vlog -vlog01compat -work work +incdir+D:/Data/Project/Electronics/electronics/verilog/updown/altera_build {D:/Data/Project/Electronics/electronics/verilog/updown/altera_build/UpDown_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module UpDown_tb
+# 
+# Top level modules:
+# 	UpDown_tb
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs="+acc"  UpDown_tb
+# vsim +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps UpDown_tb 
+# Loading work.UpDown_tb
+# Loading work.UpDown
+# Loading cycloneii_ver.cycloneii_io
+# Loading cycloneii_ver.cycloneii_mux21
+# Loading cycloneii_ver.cycloneii_dffe
+# Loading cycloneii_ver.cycloneii_asynch_io
+# Loading cycloneii_ver.cycloneii_clkctrl
+# Loading cycloneii_ver.cycloneii_mux41
+# Loading cycloneii_ver.cycloneii_ena_reg
+# Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_lcell_ff
+# SDF 10.1b Compiler 2012.04 Apr 27 2012
+# 
+# Loading instances from UpDown_v.sdo
+# Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
+# Loading timing data from UpDown_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /UpDown_tb File: D:/Data/Project/Electronics/electronics/verilog/updown/altera_build/UpDown_tb.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $finish    : D:/Data/Project/Electronics/electronics/verilog/updown/altera_build/UpDown_tb.v(75)
+#    Time: 1160 ns  Iteration: 0  Instance: /UpDown_tb
+# 1
+# Break in Module UpDown_tb at D:/Data/Project/Electronics/electronics/verilog/updown/altera_build/UpDown_tb.v line 75
+# Simulation Breakpoint: 1
+# Break in Module UpDown_tb at D:/Data/Project/Electronics/electronics/verilog/updown/altera_build/UpDown_tb.v line 75
+# MACRO ./UpDown_run_msim_gate_verilog.do PAUSED at line 17

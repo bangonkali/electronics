@@ -1,0 +1,81 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneii
+Quartus root          :  e:/program files (x86)/altera/12.1/quartus/bin64/
+Quartus sim root      :  e:/program files (x86)/altera/12.1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  UpDown.vo
+Sim SDF file          :  UpDown__verilog.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script e:/program files (x86)/altera/12.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Probing transcript
+ModelSim-Altera Info: # Reading E:/Program Files (x86)/Altera/12.1/modelsim/modelsim_ase/tcl/vsim/pref.tcl 
+ModelSim-Altera Info: # do UpDown_run_msim_gate_verilog.do 
+ModelSim-Altera Info: # if {[file exists gate_work]} {
+ModelSim-Altera Info: # 	vdel -lib gate_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib gate_work
+ModelSim-Altera Info: # vmap work gate_work
+ModelSim-Altera Info: # Copying E:\Program Files (x86)\Altera\12.1\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Warning: # ** Warning: Copied E:\Program Files (x86)\Altera\12.1\modelsim\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+ModelSim-Altera Info: #          Updated modelsim.ini.
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+. {UpDown.vo}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+ModelSim-Altera Info: # -- Compiling module UpDown
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	UpDown
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+D:/Data/Project/Electronics/electronics/verilog/updown/altera_build {D:/Data/Project/Electronics/electronics/verilog/updown/altera_build/UpDown_tb.v}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+ModelSim-Altera Info: # -- Compiling module UpDown_tb
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	UpDown_tb
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vsim -t 1ps +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs="+acc"  UpDown_tb
+ModelSim-Altera Info: # vsim +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps UpDown_tb 
+ModelSim-Altera Info: # Loading work.UpDown_tb
+ModelSim-Altera Info: # Loading work.UpDown
+ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_io
+ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_mux21
+ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_dffe
+ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_asynch_io
+ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_clkctrl
+ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_mux41
+ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_ena_reg
+ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_lcell_comb
+ModelSim-Altera Info: # Loading cycloneii_ver.cycloneii_lcell_ff
+ModelSim-Altera Info: # SDF 10.1b Compiler 2012.04 Apr 27 2012
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Loading instances from UpDown_v.sdo
+ModelSim-Altera Info: # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
+ModelSim-Altera Info: # Loading timing data from UpDown_v.sdo
+ModelSim-Altera Info: # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /UpDown_tb File: D:/Data/Project/Electronics/electronics/verilog/updown/altera_build/UpDown_tb.v
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # add wave *
+ModelSim-Altera Info: # view structure
+ModelSim-Altera Info: # .main_pane.structure.interior.cs.body.struct
+ModelSim-Altera Info: # view signals
+ModelSim-Altera Info: # .main_pane.objects.interior.cs.body.tree
+ModelSim-Altera Info: # run -all
+ModelSim-Altera Info: # ** Note: $finish    : D:/Data/Project/Electronics/electronics/verilog/updown/altera_build/UpDown_tb.v(75)
+ModelSim-Altera Info: #    Time: 1160 ns  Iteration: 0  Instance: /UpDown_tb
+ModelSim-Altera Info: # 1
+ModelSim-Altera Info: # Break in Module UpDown_tb at D:/Data/Project/Electronics/electronics/verilog/updown/altera_build/UpDown_tb.v line 75
+ModelSim-Altera Info: # Simulation Breakpoint: 1
+ModelSim-Altera Info: # Break in Module UpDown_tb at D:/Data/Project/Electronics/electronics/verilog/updown/altera_build/UpDown_tb.v line 75
+ModelSim-Altera Info: # MACRO ./UpDown_run_msim_gate_verilog.do PAUSED at line 17
+Info: NativeLink simulation flow was successful

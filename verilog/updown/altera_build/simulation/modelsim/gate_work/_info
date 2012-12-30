@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Data\Project\Electronics\electronics\verilog\updown\altera_build\simulation\modelsim
+vUpDown
+Ico1mc[a2X8H0iElXOHoh52
+V=6_3lMjhg6Z=G;>?A0;A92
+Z1 dD:\Data\Project\Electronics\electronics\verilog\updown\altera_build\simulation\modelsim
+w1356852252
+8UpDown.vo
+FUpDown.vo
+L0 31
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@up@down
+!i10b 1
+!s100 DXeZ9@ZXO654mh`2Qn`TS0
+!s85 0
+!s108 1356852264.680000
+!s107 UpDown.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|UpDown.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+vUpDown_tb
+!i10b 1
+!s100 hBeMc7Wi]ma44QEf`kgEY1
+IJ[<ek2?]a8QO;dgASOkPE1
+VnOQ8aR:@?@VJoN>Xl?Gd=1
+R1
+w1356852024
+8D:/Data/Project/Electronics/electronics/verilog/updown/altera_build/UpDown_tb.v
+FD:/Data/Project/Electronics/electronics/verilog/updown/altera_build/UpDown_tb.v
+L0 25
+R2
+r1
+!s85 0
+31
+!s108 1356852264.963000
+!s107 D:/Data/Project/Electronics/electronics/verilog/updown/altera_build/UpDown_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Data/Project/Electronics/electronics/verilog/updown/altera_build|D:/Data/Project/Electronics/electronics/verilog/updown/altera_build/UpDown_tb.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/Data/Project/Electronics/electronics/verilog/updown/altera_build -O0
+n@up@down_tb
