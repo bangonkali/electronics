@@ -1,0 +1,7 @@
+module Blinker(
+	input wire clock,
+	output reg bout
+);
+	
+
+endmodule

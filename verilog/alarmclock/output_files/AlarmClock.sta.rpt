@@ -1,0 +1,1306 @@
+TimeQuest Timing Analyzer report for AlarmClock
+Thu Mar 21 14:19:14 2013
+Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clock'
+ 12. Slow Model Hold: 'clock'
+ 13. Slow Model Minimum Pulse Width: 'clock'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clock'
+ 24. Fast Model Hold: 'clock'
+ 25. Fast Model Minimum Pulse Width: 'clock'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                     ;
++--------------------+--------------------------------------------------+
+; Quartus II Version ; Version 12.1 Build 177 11/07/2012 SJ Web Edition ;
+; Revision Name      ; AlarmClock                                       ;
+; Device Family      ; Cyclone II                                       ;
+; Device Name        ; EP2C20F484C7                                     ;
+; Timing Models      ; Final                                            ;
+; Delay Model        ; Combined                                         ;
+; Rise/Fall Delays   ; Unavailable                                      ;
++--------------------+--------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ; < 0.1%      ;
+;     3-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 137.53 MHz ; 137.53 MHz      ; clock      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -6.271 ; -2100.215     ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.445 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.631 ; -544.199              ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock'                                                                                              ;
++--------+---------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node           ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -6.271 ; active_mode[2]      ; alarm_hours[31]   ; clock        ; clock       ; 1.000        ; -0.008     ; 7.301      ;
+; -6.165 ; active_mode[2]      ; alarm_hours[29]   ; clock        ; clock       ; 1.000        ; -0.003     ; 7.200      ;
+; -6.126 ; active_mode[2]      ; alarm_minutes[31] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.167      ;
+; -6.118 ; current_blinking[1] ; alarm_hours[31]   ; clock        ; clock       ; 1.000        ; -0.008     ; 7.148      ;
+; -6.112 ; active_mode[2]      ; alarm_minutes[29] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.153      ;
+; -6.106 ; active_mode[1]      ; alarm_hours[31]   ; clock        ; clock       ; 1.000        ; -0.008     ; 7.136      ;
+; -6.098 ; active_mode[2]      ; alarm_minutes[30] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.139      ;
+; -6.096 ; active_mode[2]      ; alarm_hours[30]   ; clock        ; clock       ; 1.000        ; -0.003     ; 7.131      ;
+; -6.096 ; current_blinking[2] ; alarm_hours[31]   ; clock        ; clock       ; 1.000        ; -0.008     ; 7.126      ;
+; -6.077 ; active_mode[2]      ; alarm_minutes[27] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.118      ;
+; -6.056 ; active_mode[2]      ; alarm_hours[26]   ; clock        ; clock       ; 1.000        ; -0.003     ; 7.091      ;
+; -6.037 ; active_mode[2]      ; alarm_seconds[31] ; clock        ; clock       ; 1.000        ; -0.008     ; 7.067      ;
+; -6.023 ; seconds[0]          ; seconds[30]       ; clock        ; clock       ; 1.000        ; 0.001      ; 7.062      ;
+; -6.020 ; seconds[10]         ; seconds[31]       ; clock        ; clock       ; 1.000        ; 0.004      ; 7.062      ;
+; -6.012 ; current_blinking[1] ; alarm_hours[29]   ; clock        ; clock       ; 1.000        ; -0.003     ; 7.047      ;
+; -6.011 ; seconds[11]         ; seconds[31]       ; clock        ; clock       ; 1.000        ; 0.004      ; 7.053      ;
+; -6.000 ; active_mode[1]      ; alarm_hours[29]   ; clock        ; clock       ; 1.000        ; -0.003     ; 7.035      ;
+; -5.993 ; seconds[1]          ; hour[15]          ; clock        ; clock       ; 1.000        ; 0.001      ; 7.032      ;
+; -5.993 ; seconds[1]          ; hour[16]          ; clock        ; clock       ; 1.000        ; 0.001      ; 7.032      ;
+; -5.993 ; seconds[1]          ; hour[17]          ; clock        ; clock       ; 1.000        ; 0.001      ; 7.032      ;
+; -5.993 ; seconds[1]          ; hour[18]          ; clock        ; clock       ; 1.000        ; 0.001      ; 7.032      ;
+; -5.993 ; seconds[1]          ; hour[3]           ; clock        ; clock       ; 1.000        ; 0.001      ; 7.032      ;
+; -5.990 ; current_blinking[2] ; alarm_hours[29]   ; clock        ; clock       ; 1.000        ; -0.003     ; 7.025      ;
+; -5.977 ; previous_pb_down    ; alarm_hours[31]   ; clock        ; clock       ; 1.000        ; -0.008     ; 7.007      ;
+; -5.974 ; seconds[1]          ; hour[1]           ; clock        ; clock       ; 1.000        ; 0.002      ; 7.014      ;
+; -5.974 ; seconds[1]          ; hour[2]           ; clock        ; clock       ; 1.000        ; 0.002      ; 7.014      ;
+; -5.974 ; seconds[1]          ; hour[0]           ; clock        ; clock       ; 1.000        ; 0.002      ; 7.014      ;
+; -5.968 ; current_blinking[1] ; alarm_minutes[31] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.009      ;
+; -5.961 ; active_mode[1]      ; alarm_minutes[31] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.002      ;
+; -5.956 ; seconds[8]          ; seconds[31]       ; clock        ; clock       ; 1.000        ; 0.001      ; 6.995      ;
+; -5.956 ; milisec[5]          ; hour[15]          ; clock        ; clock       ; 1.000        ; 0.000      ; 6.994      ;
+; -5.956 ; milisec[5]          ; hour[16]          ; clock        ; clock       ; 1.000        ; 0.000      ; 6.994      ;
+; -5.956 ; milisec[5]          ; hour[17]          ; clock        ; clock       ; 1.000        ; 0.000      ; 6.994      ;
+; -5.956 ; milisec[5]          ; hour[18]          ; clock        ; clock       ; 1.000        ; 0.000      ; 6.994      ;
+; -5.956 ; milisec[5]          ; hour[3]           ; clock        ; clock       ; 1.000        ; 0.000      ; 6.994      ;
+; -5.954 ; current_blinking[1] ; alarm_minutes[29] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.995      ;
+; -5.952 ; current_blinking[2] ; alarm_minutes[31] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.993      ;
+; -5.947 ; active_mode[1]      ; alarm_minutes[29] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.988      ;
+; -5.944 ; active_mode[2]      ; alarm_hours[28]   ; clock        ; clock       ; 1.000        ; -0.003     ; 6.979      ;
+; -5.943 ; current_blinking[1] ; alarm_hours[30]   ; clock        ; clock       ; 1.000        ; -0.003     ; 6.978      ;
+; -5.942 ; seconds[10]         ; seconds[14]       ; clock        ; clock       ; 1.000        ; 0.000      ; 6.980      ;
+; -5.940 ; current_blinking[1] ; alarm_minutes[30] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.981      ;
+; -5.938 ; current_blinking[2] ; alarm_minutes[29] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.979      ;
+; -5.938 ; seconds[3]          ; hour[15]          ; clock        ; clock       ; 1.000        ; 0.000      ; 6.976      ;
+; -5.938 ; seconds[3]          ; hour[16]          ; clock        ; clock       ; 1.000        ; 0.000      ; 6.976      ;
+; -5.938 ; seconds[3]          ; hour[17]          ; clock        ; clock       ; 1.000        ; 0.000      ; 6.976      ;
+; -5.938 ; seconds[3]          ; hour[18]          ; clock        ; clock       ; 1.000        ; 0.000      ; 6.976      ;
+; -5.938 ; seconds[3]          ; hour[3]           ; clock        ; clock       ; 1.000        ; 0.000      ; 6.976      ;
+; -5.937 ; seconds[10]         ; seconds[6]        ; clock        ; clock       ; 1.000        ; 0.003      ; 6.978      ;
+; -5.937 ; seconds[10]         ; seconds[7]        ; clock        ; clock       ; 1.000        ; 0.003      ; 6.978      ;
+; -5.937 ; seconds[10]         ; seconds[8]        ; clock        ; clock       ; 1.000        ; 0.003      ; 6.978      ;
+; -5.937 ; seconds[10]         ; seconds[9]        ; clock        ; clock       ; 1.000        ; 0.003      ; 6.978      ;
+; -5.937 ; milisec[5]          ; hour[1]           ; clock        ; clock       ; 1.000        ; 0.001      ; 6.976      ;
+; -5.937 ; milisec[5]          ; hour[2]           ; clock        ; clock       ; 1.000        ; 0.001      ; 6.976      ;
+; -5.937 ; milisec[5]          ; hour[0]           ; clock        ; clock       ; 1.000        ; 0.001      ; 6.976      ;
+; -5.935 ; active_mode[2]      ; alarm_seconds[29] ; clock        ; clock       ; 1.000        ; -0.010     ; 6.963      ;
+; -5.933 ; active_mode[1]      ; alarm_minutes[30] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.974      ;
+; -5.933 ; seconds[11]         ; seconds[14]       ; clock        ; clock       ; 1.000        ; 0.000      ; 6.971      ;
+; -5.932 ; seconds[10]         ; hour[15]          ; clock        ; clock       ; 1.000        ; 0.002      ; 6.972      ;
+; -5.932 ; seconds[10]         ; hour[16]          ; clock        ; clock       ; 1.000        ; 0.002      ; 6.972      ;
+; -5.932 ; seconds[10]         ; hour[17]          ; clock        ; clock       ; 1.000        ; 0.002      ; 6.972      ;
+; -5.932 ; seconds[10]         ; hour[18]          ; clock        ; clock       ; 1.000        ; 0.002      ; 6.972      ;
+; -5.932 ; seconds[10]         ; hour[3]           ; clock        ; clock       ; 1.000        ; 0.002      ; 6.972      ;
+; -5.931 ; active_mode[1]      ; alarm_hours[30]   ; clock        ; clock       ; 1.000        ; -0.003     ; 6.966      ;
+; -5.928 ; seconds[11]         ; seconds[6]        ; clock        ; clock       ; 1.000        ; 0.003      ; 6.969      ;
+; -5.928 ; seconds[11]         ; seconds[7]        ; clock        ; clock       ; 1.000        ; 0.003      ; 6.969      ;
+; -5.928 ; seconds[11]         ; seconds[8]        ; clock        ; clock       ; 1.000        ; 0.003      ; 6.969      ;
+; -5.928 ; seconds[11]         ; seconds[9]        ; clock        ; clock       ; 1.000        ; 0.003      ; 6.969      ;
+; -5.927 ; seconds[10]         ; seconds[18]       ; clock        ; clock       ; 1.000        ; 0.005      ; 6.970      ;
+; -5.927 ; seconds[10]         ; seconds[19]       ; clock        ; clock       ; 1.000        ; 0.005      ; 6.970      ;
+; -5.927 ; seconds[10]         ; seconds[20]       ; clock        ; clock       ; 1.000        ; 0.005      ; 6.970      ;
+; -5.927 ; seconds[10]         ; seconds[21]       ; clock        ; clock       ; 1.000        ; 0.005      ; 6.970      ;
+; -5.924 ; current_blinking[2] ; alarm_minutes[30] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.965      ;
+; -5.923 ; seconds[11]         ; hour[15]          ; clock        ; clock       ; 1.000        ; 0.002      ; 6.963      ;
+; -5.923 ; seconds[11]         ; hour[16]          ; clock        ; clock       ; 1.000        ; 0.002      ; 6.963      ;
+; -5.923 ; seconds[11]         ; hour[17]          ; clock        ; clock       ; 1.000        ; 0.002      ; 6.963      ;
+; -5.923 ; seconds[11]         ; hour[18]          ; clock        ; clock       ; 1.000        ; 0.002      ; 6.963      ;
+; -5.923 ; seconds[11]         ; hour[3]           ; clock        ; clock       ; 1.000        ; 0.002      ; 6.963      ;
+; -5.922 ; seconds[1]          ; seconds[30]       ; clock        ; clock       ; 1.000        ; 0.001      ; 6.961      ;
+; -5.921 ; current_blinking[2] ; alarm_hours[30]   ; clock        ; clock       ; 1.000        ; -0.003     ; 6.956      ;
+; -5.919 ; current_blinking[1] ; alarm_minutes[27] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.960      ;
+; -5.919 ; seconds[3]          ; hour[1]           ; clock        ; clock       ; 1.000        ; 0.001      ; 6.958      ;
+; -5.919 ; seconds[3]          ; hour[2]           ; clock        ; clock       ; 1.000        ; 0.001      ; 6.958      ;
+; -5.919 ; seconds[3]          ; hour[0]           ; clock        ; clock       ; 1.000        ; 0.001      ; 6.958      ;
+; -5.918 ; seconds[7]          ; seconds[31]       ; clock        ; clock       ; 1.000        ; 0.001      ; 6.957      ;
+; -5.918 ; seconds[11]         ; seconds[18]       ; clock        ; clock       ; 1.000        ; 0.005      ; 6.961      ;
+; -5.918 ; seconds[11]         ; seconds[19]       ; clock        ; clock       ; 1.000        ; 0.005      ; 6.961      ;
+; -5.918 ; seconds[11]         ; seconds[20]       ; clock        ; clock       ; 1.000        ; 0.005      ; 6.961      ;
+; -5.918 ; seconds[11]         ; seconds[21]       ; clock        ; clock       ; 1.000        ; 0.005      ; 6.961      ;
+; -5.913 ; seconds[10]         ; hour[1]           ; clock        ; clock       ; 1.000        ; 0.003      ; 6.954      ;
+; -5.913 ; seconds[10]         ; hour[2]           ; clock        ; clock       ; 1.000        ; 0.003      ; 6.954      ;
+; -5.913 ; seconds[10]         ; hour[0]           ; clock        ; clock       ; 1.000        ; 0.003      ; 6.954      ;
+; -5.912 ; active_mode[1]      ; alarm_minutes[27] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.953      ;
+; -5.908 ; active_mode[2]      ; alarm_seconds[27] ; clock        ; clock       ; 1.000        ; -0.010     ; 6.936      ;
+; -5.905 ; seconds[23]         ; hour[15]          ; clock        ; clock       ; 1.000        ; -0.002     ; 6.941      ;
+; -5.905 ; seconds[23]         ; hour[16]          ; clock        ; clock       ; 1.000        ; -0.002     ; 6.941      ;
+; -5.905 ; seconds[23]         ; hour[17]          ; clock        ; clock       ; 1.000        ; -0.002     ; 6.941      ;
+; -5.905 ; seconds[23]         ; hour[18]          ; clock        ; clock       ; 1.000        ; -0.002     ; 6.941      ;
+; -5.905 ; seconds[23]         ; hour[3]           ; clock        ; clock       ; 1.000        ; -0.002     ; 6.941      ;
+; -5.904 ; seconds[11]         ; hour[1]           ; clock        ; clock       ; 1.000        ; 0.003      ; 6.945      ;
++--------+---------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock'                                                                                                                                    ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; active_mode[2]                        ; active_mode[2]                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; current_blinking[2]                   ; current_blinking[2]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Blinker:Blinker_DispA|bout            ; Blinker:Blinker_DispA|bout            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; current_view                          ; current_view                          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; current_blinking[1]                   ; current_blinking[1]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; active_mode[1]                        ; active_mode[1]                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Blinker:Blinker_DispB|bout            ; Blinker:Blinker_DispB|bout            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.629 ; Blinker:Blinker_DispA|clock_count[31] ; Blinker:Blinker_DispA|clock_count[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.915      ;
+; 0.629 ; Blinker:Blinker_DispA|blink_count[31] ; Blinker:Blinker_DispA|blink_count[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.915      ;
+; 0.629 ; clock_khz[31]                         ; clock_khz[31]                         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.915      ;
+; 0.629 ; milisec[31]                           ; milisec[31]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.915      ;
+; 0.629 ; Blinker:Blinker_DispB|clock_count[31] ; Blinker:Blinker_DispB|clock_count[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.915      ;
+; 0.629 ; Blinker:Blinker_DispB|blink_count[31] ; Blinker:Blinker_DispB|blink_count[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.915      ;
+; 0.677 ; current_blinking[2]                   ; current_blinking[1]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.963      ;
+; 0.771 ; minutes[10]                           ; minutes[10]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.057      ;
+; 0.773 ; hour[20]                              ; hour[20]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.059      ;
+; 0.777 ; seconds[28]                           ; seconds[28]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.063      ;
+; 0.777 ; seconds[14]                           ; seconds[14]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.063      ;
+; 0.779 ; seconds[10]                           ; seconds[10]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.065      ;
+; 0.779 ; hour[11]                              ; hour[11]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.065      ;
+; 0.779 ; hour[18]                              ; hour[18]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.065      ;
+; 0.780 ; hour[22]                              ; hour[22]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.066      ;
+; 0.782 ; seconds[5]                            ; seconds[5]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.068      ;
+; 0.782 ; seconds[8]                            ; seconds[8]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.068      ;
+; 0.782 ; minutes[3]                            ; minutes[3]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.068      ;
+; 0.782 ; hour[27]                              ; hour[27]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.068      ;
+; 0.783 ; seconds[27]                           ; seconds[27]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.069      ;
+; 0.783 ; minutes[22]                           ; minutes[22]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.069      ;
+; 0.783 ; minutes[7]                            ; minutes[7]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.069      ;
+; 0.783 ; hour[23]                              ; hour[23]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.069      ;
+; 0.784 ; seconds[25]                           ; seconds[25]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.070      ;
+; 0.784 ; seconds[6]                            ; seconds[6]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.070      ;
+; 0.784 ; hour[3]                               ; hour[3]                               ; clock        ; clock       ; 0.000        ; 0.000      ; 1.070      ;
+; 0.786 ; hour[12]                              ; hour[12]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.072      ;
+; 0.787 ; seconds[20]                           ; seconds[20]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.073      ;
+; 0.787 ; minutes[15]                           ; minutes[15]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.073      ;
+; 0.787 ; minutes[16]                           ; minutes[16]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.073      ;
+; 0.787 ; minutes[20]                           ; minutes[20]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.073      ;
+; 0.787 ; minutes[29]                           ; minutes[29]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.073      ;
+; 0.787 ; minutes[30]                           ; minutes[30]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.073      ;
+; 0.787 ; hour[14]                              ; hour[14]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.073      ;
+; 0.788 ; seconds[22]                           ; seconds[22]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.074      ;
+; 0.788 ; minutes[11]                           ; minutes[11]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.074      ;
+; 0.790 ; seconds[12]                           ; seconds[12]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.076      ;
+; 0.790 ; minutes[5]                            ; minutes[5]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.076      ;
+; 0.790 ; minutes[8]                            ; minutes[8]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.076      ;
+; 0.790 ; hour[8]                               ; hour[8]                               ; clock        ; clock       ; 0.000        ; 0.000      ; 1.076      ;
+; 0.791 ; seconds[2]                            ; seconds[2]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.077      ;
+; 0.791 ; seconds[11]                           ; seconds[11]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.077      ;
+; 0.791 ; seconds[15]                           ; seconds[15]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.077      ;
+; 0.791 ; hour[5]                               ; hour[5]                               ; clock        ; clock       ; 0.000        ; 0.000      ; 1.077      ;
+; 0.792 ; minutes[24]                           ; minutes[24]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.078      ;
+; 0.792 ; hour[24]                              ; hour[24]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.078      ;
+; 0.794 ; seconds[18]                           ; seconds[18]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.080      ;
+; 0.796 ; minutes[14]                           ; minutes[14]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.082      ;
+; 0.796 ; minutes[18]                           ; minutes[18]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.082      ;
+; 0.799 ; minutes[27]                           ; minutes[27]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.085      ;
+; 0.802 ; hour[9]                               ; hour[9]                               ; clock        ; clock       ; 0.000        ; 0.000      ; 1.088      ;
+; 0.811 ; hour[4]                               ; hour[4]                               ; clock        ; clock       ; 0.000        ; 0.000      ; 1.097      ;
+; 0.960 ; Blinker:Blinker_DispA|blink_count[0]  ; Blinker:Blinker_DispA|blink_count[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.246      ;
+; 0.960 ; Blinker:Blinker_DispB|blink_count[0]  ; Blinker:Blinker_DispB|blink_count[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.246      ;
+; 0.962 ; seconds[19]                           ; seconds[19]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.248      ;
+; 0.963 ; seconds[9]                            ; seconds[9]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.249      ;
+; 0.964 ; seconds[3]                            ; seconds[3]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.250      ;
+; 0.965 ; seconds[29]                           ; seconds[29]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.251      ;
+; 0.967 ; Blinker:Blinker_DispA|blink_count[1]  ; Blinker:Blinker_DispA|blink_count[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.253      ;
+; 0.967 ; Blinker:Blinker_DispB|blink_count[1]  ; Blinker:Blinker_DispB|blink_count[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.253      ;
+; 0.968 ; Blinker:Blinker_DispA|clock_count[16] ; Blinker:Blinker_DispA|clock_count[16] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.254      ;
+; 0.968 ; Blinker:Blinker_DispA|blink_count[16] ; Blinker:Blinker_DispA|blink_count[16] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.254      ;
+; 0.968 ; clock_khz[0]                          ; clock_khz[0]                          ; clock        ; clock       ; 0.000        ; 0.000      ; 1.254      ;
+; 0.968 ; clock_khz[16]                         ; clock_khz[16]                         ; clock        ; clock       ; 0.000        ; 0.000      ; 1.254      ;
+; 0.968 ; Blinker:Blinker_DispB|clock_count[16] ; Blinker:Blinker_DispB|clock_count[16] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.254      ;
+; 0.968 ; Blinker:Blinker_DispB|blink_count[16] ; Blinker:Blinker_DispB|blink_count[16] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.254      ;
+; 0.971 ; milisec[16]                           ; milisec[16]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.257      ;
+; 0.975 ; Blinker:Blinker_DispA|clock_count[1]  ; Blinker:Blinker_DispA|clock_count[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.261      ;
+; 0.975 ; Blinker:Blinker_DispA|clock_count[17] ; Blinker:Blinker_DispA|clock_count[17] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.261      ;
+; 0.975 ; Blinker:Blinker_DispA|blink_count[17] ; Blinker:Blinker_DispA|blink_count[17] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.261      ;
+; 0.975 ; clock_khz[1]                          ; clock_khz[1]                          ; clock        ; clock       ; 0.000        ; 0.000      ; 1.261      ;
+; 0.975 ; clock_khz[17]                         ; clock_khz[17]                         ; clock        ; clock       ; 0.000        ; 0.000      ; 1.261      ;
+; 0.975 ; milisec[1]                            ; milisec[1]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.261      ;
+; 0.975 ; milisec[17]                           ; milisec[17]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.261      ;
+; 0.975 ; Blinker:Blinker_DispB|clock_count[1]  ; Blinker:Blinker_DispB|clock_count[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.261      ;
+; 0.975 ; Blinker:Blinker_DispB|clock_count[17] ; Blinker:Blinker_DispB|clock_count[17] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.261      ;
+; 0.975 ; Blinker:Blinker_DispB|blink_count[17] ; Blinker:Blinker_DispB|blink_count[17] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.261      ;
+; 0.976 ; Blinker:Blinker_DispA|clock_count[2]  ; Blinker:Blinker_DispA|clock_count[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; Blinker:Blinker_DispA|clock_count[9]  ; Blinker:Blinker_DispA|clock_count[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; Blinker:Blinker_DispA|clock_count[18] ; Blinker:Blinker_DispA|clock_count[18] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; Blinker:Blinker_DispA|clock_count[25] ; Blinker:Blinker_DispA|clock_count[25] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; Blinker:Blinker_DispA|blink_count[2]  ; Blinker:Blinker_DispA|blink_count[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; Blinker:Blinker_DispA|blink_count[9]  ; Blinker:Blinker_DispA|blink_count[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; Blinker:Blinker_DispA|blink_count[18] ; Blinker:Blinker_DispA|blink_count[18] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; Blinker:Blinker_DispA|blink_count[25] ; Blinker:Blinker_DispA|blink_count[25] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; clock_khz[2]                          ; clock_khz[2]                          ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; clock_khz[9]                          ; clock_khz[9]                          ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; clock_khz[18]                         ; clock_khz[18]                         ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; clock_khz[25]                         ; clock_khz[25]                         ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; milisec[2]                            ; milisec[2]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; milisec[9]                            ; milisec[9]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; milisec[18]                           ; milisec[18]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; milisec[25]                           ; milisec[25]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock'                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clock ; Rise       ; clock                                 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[10] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[10] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[11] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[11] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[12] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[12] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[13] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[13] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[14] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[14] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[15] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[15] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[16] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[16] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[17] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[17] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[18] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[18] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[19] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[19] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[20] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[20] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[21] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[21] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[22] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[22] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[23] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[23] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[24] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[24] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[25] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[25] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[26] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[26] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[27] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[27] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[28] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[28] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[29] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[29] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[30] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[30] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[31] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[31] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[3]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[3]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[4]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[4]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[5]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[5]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[6]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[6]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[7]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[7]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[8]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[8]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[9]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[9]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|bout            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|bout            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[10] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[10] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[11] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[11] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[12] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[12] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[13] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[13] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[14] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[14] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[15] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[15] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[16] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[16] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[17] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[17] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[18] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[18] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[19] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[19] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[20] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[20] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[21] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[21] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[22] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[22] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[23] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[23] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[24] ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Setup Times                                                                  ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; pb_down        ; clock      ; 10.841 ; 10.841 ; Rise       ; clock           ;
+; pb_mode_select ; clock      ; 6.807  ; 6.807  ; Rise       ; clock           ;
+; pb_next        ; clock      ; 6.897  ; 6.897  ; Rise       ; clock           ;
+; pb_up          ; clock      ; 9.954  ; 9.954  ; Rise       ; clock           ;
+; sw_enable      ; clock      ; 2.950  ; 2.950  ; Rise       ; clock           ;
+; sw_reset       ; clock      ; 6.047  ; 6.047  ; Rise       ; clock           ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; pb_down        ; clock      ; -4.584 ; -4.584 ; Rise       ; clock           ;
+; pb_mode_select ; clock      ; -4.444 ; -4.444 ; Rise       ; clock           ;
+; pb_next        ; clock      ; -4.222 ; -4.222 ; Rise       ; clock           ;
+; pb_up          ; clock      ; -4.904 ; -4.904 ; Rise       ; clock           ;
+; sw_enable      ; clock      ; -1.446 ; -1.446 ; Rise       ; clock           ;
+; sw_reset       ; clock      ; -0.380 ; -0.380 ; Rise       ; clock           ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; alarm_out       ; clock      ; 8.803 ; 8.803 ; Rise       ; clock           ;
+; disp_a_leds[*]  ; clock      ; 7.451 ; 7.451 ; Rise       ; clock           ;
+;  disp_a_leds[1] ; clock      ; 7.052 ; 7.052 ; Rise       ; clock           ;
+;  disp_a_leds[2] ; clock      ; 7.449 ; 7.449 ; Rise       ; clock           ;
+;  disp_a_leds[3] ; clock      ; 7.431 ; 7.431 ; Rise       ; clock           ;
+;  disp_a_leds[4] ; clock      ; 7.428 ; 7.428 ; Rise       ; clock           ;
+;  disp_a_leds[5] ; clock      ; 7.450 ; 7.450 ; Rise       ; clock           ;
+;  disp_a_leds[6] ; clock      ; 7.448 ; 7.448 ; Rise       ; clock           ;
+;  disp_a_leds[7] ; clock      ; 7.451 ; 7.451 ; Rise       ; clock           ;
+; disp_b_leds[*]  ; clock      ; 8.352 ; 8.352 ; Rise       ; clock           ;
+;  disp_b_leds[1] ; clock      ; 8.103 ; 8.103 ; Rise       ; clock           ;
+;  disp_b_leds[2] ; clock      ; 7.995 ; 7.995 ; Rise       ; clock           ;
+;  disp_b_leds[3] ; clock      ; 7.419 ; 7.419 ; Rise       ; clock           ;
+;  disp_b_leds[4] ; clock      ; 7.975 ; 7.975 ; Rise       ; clock           ;
+;  disp_b_leds[5] ; clock      ; 7.988 ; 7.988 ; Rise       ; clock           ;
+;  disp_b_leds[6] ; clock      ; 7.996 ; 7.996 ; Rise       ; clock           ;
+;  disp_b_leds[7] ; clock      ; 8.352 ; 8.352 ; Rise       ; clock           ;
+; disp_c_leds[*]  ; clock      ; 8.405 ; 8.405 ; Rise       ; clock           ;
+;  disp_c_leds[1] ; clock      ; 7.973 ; 7.973 ; Rise       ; clock           ;
+;  disp_c_leds[2] ; clock      ; 7.961 ; 7.961 ; Rise       ; clock           ;
+;  disp_c_leds[3] ; clock      ; 8.349 ; 8.349 ; Rise       ; clock           ;
+;  disp_c_leds[4] ; clock      ; 8.026 ; 8.026 ; Rise       ; clock           ;
+;  disp_c_leds[5] ; clock      ; 8.359 ; 8.359 ; Rise       ; clock           ;
+;  disp_c_leds[6] ; clock      ; 8.361 ; 8.361 ; Rise       ; clock           ;
+;  disp_c_leds[7] ; clock      ; 8.405 ; 8.405 ; Rise       ; clock           ;
+; disp_d_leds[*]  ; clock      ; 8.539 ; 8.539 ; Rise       ; clock           ;
+;  disp_d_leds[1] ; clock      ; 8.079 ; 8.079 ; Rise       ; clock           ;
+;  disp_d_leds[2] ; clock      ; 8.516 ; 8.516 ; Rise       ; clock           ;
+;  disp_d_leds[3] ; clock      ; 8.539 ; 8.539 ; Rise       ; clock           ;
+;  disp_d_leds[4] ; clock      ; 7.244 ; 7.244 ; Rise       ; clock           ;
+;  disp_d_leds[5] ; clock      ; 7.943 ; 7.943 ; Rise       ; clock           ;
+;  disp_d_leds[6] ; clock      ; 7.864 ; 7.864 ; Rise       ; clock           ;
+;  disp_d_leds[7] ; clock      ; 8.083 ; 8.083 ; Rise       ; clock           ;
+; mode_data       ; clock      ; 9.289 ; 9.289 ; Rise       ; clock           ;
+; mode_edit       ; clock      ; 8.590 ; 8.590 ; Rise       ; clock           ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; alarm_out       ; clock      ; 8.803 ; 8.803 ; Rise       ; clock           ;
+; disp_a_leds[*]  ; clock      ; 7.052 ; 7.052 ; Rise       ; clock           ;
+;  disp_a_leds[1] ; clock      ; 7.052 ; 7.052 ; Rise       ; clock           ;
+;  disp_a_leds[2] ; clock      ; 7.449 ; 7.449 ; Rise       ; clock           ;
+;  disp_a_leds[3] ; clock      ; 7.431 ; 7.431 ; Rise       ; clock           ;
+;  disp_a_leds[4] ; clock      ; 7.428 ; 7.428 ; Rise       ; clock           ;
+;  disp_a_leds[5] ; clock      ; 7.450 ; 7.450 ; Rise       ; clock           ;
+;  disp_a_leds[6] ; clock      ; 7.448 ; 7.448 ; Rise       ; clock           ;
+;  disp_a_leds[7] ; clock      ; 7.451 ; 7.451 ; Rise       ; clock           ;
+; disp_b_leds[*]  ; clock      ; 7.419 ; 7.419 ; Rise       ; clock           ;
+;  disp_b_leds[1] ; clock      ; 8.103 ; 8.103 ; Rise       ; clock           ;
+;  disp_b_leds[2] ; clock      ; 7.995 ; 7.995 ; Rise       ; clock           ;
+;  disp_b_leds[3] ; clock      ; 7.419 ; 7.419 ; Rise       ; clock           ;
+;  disp_b_leds[4] ; clock      ; 7.975 ; 7.975 ; Rise       ; clock           ;
+;  disp_b_leds[5] ; clock      ; 7.988 ; 7.988 ; Rise       ; clock           ;
+;  disp_b_leds[6] ; clock      ; 7.996 ; 7.996 ; Rise       ; clock           ;
+;  disp_b_leds[7] ; clock      ; 8.352 ; 8.352 ; Rise       ; clock           ;
+; disp_c_leds[*]  ; clock      ; 7.961 ; 7.961 ; Rise       ; clock           ;
+;  disp_c_leds[1] ; clock      ; 7.973 ; 7.973 ; Rise       ; clock           ;
+;  disp_c_leds[2] ; clock      ; 7.961 ; 7.961 ; Rise       ; clock           ;
+;  disp_c_leds[3] ; clock      ; 8.349 ; 8.349 ; Rise       ; clock           ;
+;  disp_c_leds[4] ; clock      ; 8.026 ; 8.026 ; Rise       ; clock           ;
+;  disp_c_leds[5] ; clock      ; 8.359 ; 8.359 ; Rise       ; clock           ;
+;  disp_c_leds[6] ; clock      ; 8.361 ; 8.361 ; Rise       ; clock           ;
+;  disp_c_leds[7] ; clock      ; 8.405 ; 8.405 ; Rise       ; clock           ;
+; disp_d_leds[*]  ; clock      ; 7.244 ; 7.244 ; Rise       ; clock           ;
+;  disp_d_leds[1] ; clock      ; 8.079 ; 8.079 ; Rise       ; clock           ;
+;  disp_d_leds[2] ; clock      ; 8.516 ; 8.516 ; Rise       ; clock           ;
+;  disp_d_leds[3] ; clock      ; 8.539 ; 8.539 ; Rise       ; clock           ;
+;  disp_d_leds[4] ; clock      ; 7.244 ; 7.244 ; Rise       ; clock           ;
+;  disp_d_leds[5] ; clock      ; 7.943 ; 7.943 ; Rise       ; clock           ;
+;  disp_d_leds[6] ; clock      ; 7.864 ; 7.864 ; Rise       ; clock           ;
+;  disp_d_leds[7] ; clock      ; 8.083 ; 8.083 ; Rise       ; clock           ;
+; mode_data       ; clock      ; 9.289 ; 9.289 ; Rise       ; clock           ;
+; mode_edit       ; clock      ; 8.590 ; 8.590 ; Rise       ; clock           ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -2.001 ; -553.069      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.380 ; -445.380              ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock'                                                                                              ;
++--------+---------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node           ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -2.001 ; active_mode[2]      ; alarm_hours[31]   ; clock        ; clock       ; 1.000        ; -0.008     ; 3.025      ;
+; -1.942 ; active_mode[2]      ; alarm_hours[29]   ; clock        ; clock       ; 1.000        ; -0.003     ; 2.971      ;
+; -1.928 ; active_mode[2]      ; alarm_minutes[31] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.963      ;
+; -1.914 ; active_mode[1]      ; alarm_hours[31]   ; clock        ; clock       ; 1.000        ; -0.008     ; 2.938      ;
+; -1.912 ; active_mode[2]      ; alarm_seconds[31] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.936      ;
+; -1.912 ; active_mode[2]      ; alarm_minutes[29] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.947      ;
+; -1.909 ; current_blinking[2] ; alarm_hours[31]   ; clock        ; clock       ; 1.000        ; -0.007     ; 2.934      ;
+; -1.909 ; current_blinking[1] ; alarm_hours[31]   ; clock        ; clock       ; 1.000        ; -0.007     ; 2.934      ;
+; -1.901 ; active_mode[2]      ; alarm_minutes[30] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.936      ;
+; -1.898 ; active_mode[2]      ; alarm_hours[30]   ; clock        ; clock       ; 1.000        ; -0.003     ; 2.927      ;
+; -1.869 ; previous_pb_down    ; alarm_hours[31]   ; clock        ; clock       ; 1.000        ; -0.008     ; 2.893      ;
+; -1.863 ; active_mode[2]      ; alarm_minutes[27] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.898      ;
+; -1.862 ; active_mode[2]      ; alarm_hours[26]   ; clock        ; clock       ; 1.000        ; -0.003     ; 2.891      ;
+; -1.855 ; active_mode[1]      ; alarm_hours[29]   ; clock        ; clock       ; 1.000        ; -0.003     ; 2.884      ;
+; -1.853 ; active_mode[2]      ; alarm_seconds[29] ; clock        ; clock       ; 1.000        ; -0.010     ; 2.875      ;
+; -1.850 ; current_blinking[2] ; alarm_hours[29]   ; clock        ; clock       ; 1.000        ; -0.002     ; 2.880      ;
+; -1.850 ; current_blinking[1] ; alarm_hours[29]   ; clock        ; clock       ; 1.000        ; -0.002     ; 2.880      ;
+; -1.841 ; active_mode[1]      ; alarm_minutes[31] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.876      ;
+; -1.836 ; current_blinking[2] ; alarm_minutes[31] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.872      ;
+; -1.836 ; current_blinking[1] ; alarm_minutes[31] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.872      ;
+; -1.833 ; active_mode[2]      ; alarm_hours[28]   ; clock        ; clock       ; 1.000        ; -0.003     ; 2.862      ;
+; -1.827 ; seconds[0]          ; seconds[30]       ; clock        ; clock       ; 1.000        ; 0.001      ; 2.860      ;
+; -1.825 ; active_mode[1]      ; alarm_seconds[31] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.849      ;
+; -1.825 ; active_mode[1]      ; alarm_minutes[29] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.860      ;
+; -1.820 ; current_blinking[2] ; alarm_seconds[31] ; clock        ; clock       ; 1.000        ; -0.007     ; 2.845      ;
+; -1.820 ; current_blinking[1] ; alarm_seconds[31] ; clock        ; clock       ; 1.000        ; -0.007     ; 2.845      ;
+; -1.820 ; current_blinking[2] ; alarm_minutes[29] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.856      ;
+; -1.820 ; current_blinking[1] ; alarm_minutes[29] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.856      ;
+; -1.814 ; active_mode[1]      ; alarm_minutes[30] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.849      ;
+; -1.811 ; active_mode[2]      ; alarm_seconds[27] ; clock        ; clock       ; 1.000        ; -0.010     ; 2.833      ;
+; -1.811 ; active_mode[1]      ; alarm_hours[30]   ; clock        ; clock       ; 1.000        ; -0.003     ; 2.840      ;
+; -1.810 ; previous_pb_down    ; alarm_hours[29]   ; clock        ; clock       ; 1.000        ; -0.003     ; 2.839      ;
+; -1.809 ; active_mode[2]      ; alarm_seconds[30] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.833      ;
+; -1.809 ; current_blinking[2] ; alarm_minutes[30] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.845      ;
+; -1.809 ; current_blinking[1] ; alarm_minutes[30] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.845      ;
+; -1.806 ; current_blinking[2] ; alarm_hours[30]   ; clock        ; clock       ; 1.000        ; -0.002     ; 2.836      ;
+; -1.806 ; current_blinking[1] ; alarm_hours[30]   ; clock        ; clock       ; 1.000        ; -0.002     ; 2.836      ;
+; -1.797 ; active_mode[2]      ; alarm_minutes[28] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.832      ;
+; -1.797 ; active_mode[2]      ; alarm_hours[27]   ; clock        ; clock       ; 1.000        ; -0.003     ; 2.826      ;
+; -1.796 ; previous_pb_down    ; alarm_minutes[31] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.831      ;
+; -1.785 ; seconds[1]          ; seconds[30]       ; clock        ; clock       ; 1.000        ; 0.001      ; 2.818      ;
+; -1.781 ; previous_pb_down    ; alarm_seconds[31] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.805      ;
+; -1.780 ; previous_pb_down    ; alarm_minutes[29] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.815      ;
+; -1.776 ; active_mode[1]      ; alarm_minutes[27] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.811      ;
+; -1.775 ; active_mode[1]      ; alarm_hours[26]   ; clock        ; clock       ; 1.000        ; -0.003     ; 2.804      ;
+; -1.771 ; current_blinking[2] ; alarm_minutes[27] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.807      ;
+; -1.771 ; current_blinking[1] ; alarm_minutes[27] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.807      ;
+; -1.770 ; current_blinking[2] ; alarm_hours[26]   ; clock        ; clock       ; 1.000        ; -0.002     ; 2.800      ;
+; -1.770 ; current_blinking[1] ; alarm_hours[26]   ; clock        ; clock       ; 1.000        ; -0.002     ; 2.800      ;
+; -1.769 ; previous_pb_down    ; alarm_minutes[30] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.804      ;
+; -1.766 ; previous_pb_down    ; alarm_hours[30]   ; clock        ; clock       ; 1.000        ; -0.003     ; 2.795      ;
+; -1.766 ; active_mode[1]      ; alarm_seconds[29] ; clock        ; clock       ; 1.000        ; -0.010     ; 2.788      ;
+; -1.761 ; current_blinking[2] ; alarm_seconds[29] ; clock        ; clock       ; 1.000        ; -0.009     ; 2.784      ;
+; -1.761 ; current_blinking[1] ; alarm_seconds[29] ; clock        ; clock       ; 1.000        ; -0.009     ; 2.784      ;
+; -1.748 ; active_mode[2]      ; alarm_seconds[28] ; clock        ; clock       ; 1.000        ; -0.010     ; 2.770      ;
+; -1.746 ; active_mode[1]      ; alarm_hours[28]   ; clock        ; clock       ; 1.000        ; -0.003     ; 2.775      ;
+; -1.741 ; current_blinking[2] ; alarm_hours[28]   ; clock        ; clock       ; 1.000        ; -0.002     ; 2.771      ;
+; -1.741 ; current_blinking[1] ; alarm_hours[28]   ; clock        ; clock       ; 1.000        ; -0.002     ; 2.771      ;
+; -1.734 ; active_mode[2]      ; alarm_minutes[24] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.769      ;
+; -1.732 ; seconds[10]         ; seconds[14]       ; clock        ; clock       ; 1.000        ; 0.001      ; 2.765      ;
+; -1.731 ; seconds[1]          ; hour[1]           ; clock        ; clock       ; 1.000        ; 0.003      ; 2.766      ;
+; -1.731 ; seconds[1]          ; hour[2]           ; clock        ; clock       ; 1.000        ; 0.003      ; 2.766      ;
+; -1.731 ; seconds[1]          ; hour[0]           ; clock        ; clock       ; 1.000        ; 0.003      ; 2.766      ;
+; -1.731 ; previous_pb_down    ; alarm_minutes[27] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.766      ;
+; -1.730 ; seconds[0]          ; seconds[29]       ; clock        ; clock       ; 1.000        ; -0.004     ; 2.758      ;
+; -1.730 ; previous_pb_down    ; alarm_hours[26]   ; clock        ; clock       ; 1.000        ; -0.003     ; 2.759      ;
+; -1.729 ; seconds[10]         ; seconds[6]        ; clock        ; clock       ; 1.000        ; 0.003      ; 2.764      ;
+; -1.729 ; seconds[10]         ; seconds[7]        ; clock        ; clock       ; 1.000        ; 0.003      ; 2.764      ;
+; -1.729 ; seconds[10]         ; seconds[8]        ; clock        ; clock       ; 1.000        ; 0.003      ; 2.764      ;
+; -1.729 ; seconds[10]         ; seconds[9]        ; clock        ; clock       ; 1.000        ; 0.003      ; 2.764      ;
+; -1.728 ; seconds[11]         ; seconds[14]       ; clock        ; clock       ; 1.000        ; 0.001      ; 2.761      ;
+; -1.727 ; active_mode[2]      ; alarm_minutes[26] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.762      ;
+; -1.727 ; active_mode[2]      ; alarm_hours[25]   ; clock        ; clock       ; 1.000        ; -0.003     ; 2.756      ;
+; -1.725 ; seconds[10]         ; hour[1]           ; clock        ; clock       ; 1.000        ; 0.004      ; 2.761      ;
+; -1.725 ; seconds[10]         ; hour[2]           ; clock        ; clock       ; 1.000        ; 0.004      ; 2.761      ;
+; -1.725 ; seconds[10]         ; hour[0]           ; clock        ; clock       ; 1.000        ; 0.004      ; 2.761      ;
+; -1.725 ; seconds[11]         ; seconds[6]        ; clock        ; clock       ; 1.000        ; 0.003      ; 2.760      ;
+; -1.725 ; seconds[11]         ; seconds[7]        ; clock        ; clock       ; 1.000        ; 0.003      ; 2.760      ;
+; -1.725 ; seconds[11]         ; seconds[8]        ; clock        ; clock       ; 1.000        ; 0.003      ; 2.760      ;
+; -1.725 ; seconds[11]         ; seconds[9]        ; clock        ; clock       ; 1.000        ; 0.003      ; 2.760      ;
+; -1.724 ; active_mode[1]      ; alarm_seconds[27] ; clock        ; clock       ; 1.000        ; -0.010     ; 2.746      ;
+; -1.722 ; previous_pb_down    ; alarm_seconds[29] ; clock        ; clock       ; 1.000        ; -0.010     ; 2.744      ;
+; -1.722 ; active_mode[1]      ; alarm_seconds[30] ; clock        ; clock       ; 1.000        ; -0.008     ; 2.746      ;
+; -1.722 ; seconds[8]          ; seconds[14]       ; clock        ; clock       ; 1.000        ; -0.002     ; 2.752      ;
+; -1.721 ; seconds[11]         ; hour[1]           ; clock        ; clock       ; 1.000        ; 0.004      ; 2.757      ;
+; -1.721 ; seconds[11]         ; hour[2]           ; clock        ; clock       ; 1.000        ; 0.004      ; 2.757      ;
+; -1.721 ; seconds[11]         ; hour[0]           ; clock        ; clock       ; 1.000        ; 0.004      ; 2.757      ;
+; -1.719 ; current_blinking[2] ; alarm_seconds[27] ; clock        ; clock       ; 1.000        ; -0.009     ; 2.742      ;
+; -1.719 ; current_blinking[1] ; alarm_seconds[27] ; clock        ; clock       ; 1.000        ; -0.009     ; 2.742      ;
+; -1.719 ; seconds[8]          ; seconds[6]        ; clock        ; clock       ; 1.000        ; 0.000      ; 2.751      ;
+; -1.719 ; seconds[8]          ; seconds[7]        ; clock        ; clock       ; 1.000        ; 0.000      ; 2.751      ;
+; -1.719 ; seconds[8]          ; seconds[8]        ; clock        ; clock       ; 1.000        ; 0.000      ; 2.751      ;
+; -1.719 ; seconds[8]          ; seconds[9]        ; clock        ; clock       ; 1.000        ; 0.000      ; 2.751      ;
+; -1.718 ; seconds[1]          ; hour[15]          ; clock        ; clock       ; 1.000        ; 0.002      ; 2.752      ;
+; -1.718 ; seconds[1]          ; hour[16]          ; clock        ; clock       ; 1.000        ; 0.002      ; 2.752      ;
+; -1.718 ; seconds[1]          ; hour[17]          ; clock        ; clock       ; 1.000        ; 0.002      ; 2.752      ;
+; -1.718 ; seconds[1]          ; hour[18]          ; clock        ; clock       ; 1.000        ; 0.002      ; 2.752      ;
+; -1.718 ; seconds[1]          ; hour[3]           ; clock        ; clock       ; 1.000        ; 0.002      ; 2.752      ;
+; -1.717 ; current_blinking[2] ; alarm_seconds[30] ; clock        ; clock       ; 1.000        ; -0.007     ; 2.742      ;
+; -1.717 ; current_blinking[1] ; alarm_seconds[30] ; clock        ; clock       ; 1.000        ; -0.007     ; 2.742      ;
++--------+---------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock'                                                                                                                                    ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; active_mode[2]                        ; active_mode[2]                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; current_blinking[2]                   ; current_blinking[2]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Blinker:Blinker_DispA|bout            ; Blinker:Blinker_DispA|bout            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; current_view                          ; current_view                          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; current_blinking[1]                   ; current_blinking[1]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; active_mode[1]                        ; active_mode[1]                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Blinker:Blinker_DispB|bout            ; Blinker:Blinker_DispB|bout            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.243 ; Blinker:Blinker_DispA|clock_count[31] ; Blinker:Blinker_DispA|clock_count[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; Blinker:Blinker_DispA|blink_count[31] ; Blinker:Blinker_DispA|blink_count[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; clock_khz[31]                         ; clock_khz[31]                         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; milisec[31]                           ; milisec[31]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; Blinker:Blinker_DispB|clock_count[31] ; Blinker:Blinker_DispB|clock_count[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; Blinker:Blinker_DispB|blink_count[31] ; Blinker:Blinker_DispB|blink_count[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.395      ;
+; 0.267 ; current_blinking[2]                   ; current_blinking[1]                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.419      ;
+; 0.326 ; minutes[10]                           ; minutes[10]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.478      ;
+; 0.327 ; seconds[14]                           ; seconds[14]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.479      ;
+; 0.327 ; hour[20]                              ; hour[20]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.479      ;
+; 0.329 ; seconds[28]                           ; seconds[28]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.481      ;
+; 0.329 ; hour[22]                              ; hour[22]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.481      ;
+; 0.330 ; seconds[10]                           ; seconds[10]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.482      ;
+; 0.330 ; hour[11]                              ; hour[11]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.482      ;
+; 0.331 ; seconds[25]                           ; seconds[25]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.483      ;
+; 0.331 ; seconds[8]                            ; seconds[8]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.483      ;
+; 0.331 ; hour[18]                              ; hour[18]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.483      ;
+; 0.331 ; hour[3]                               ; hour[3]                               ; clock        ; clock       ; 0.000        ; 0.000      ; 0.483      ;
+; 0.332 ; seconds[5]                            ; seconds[5]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.484      ;
+; 0.332 ; seconds[6]                            ; seconds[6]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.484      ;
+; 0.332 ; minutes[22]                           ; minutes[22]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.484      ;
+; 0.332 ; hour[27]                              ; hour[27]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.484      ;
+; 0.333 ; seconds[27]                           ; seconds[27]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.485      ;
+; 0.333 ; minutes[3]                            ; minutes[3]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.485      ;
+; 0.333 ; minutes[11]                           ; minutes[11]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.485      ;
+; 0.333 ; minutes[7]                            ; minutes[7]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.485      ;
+; 0.333 ; hour[23]                              ; hour[23]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.485      ;
+; 0.334 ; seconds[22]                           ; seconds[22]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.486      ;
+; 0.334 ; minutes[16]                           ; minutes[16]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.486      ;
+; 0.334 ; hour[12]                              ; hour[12]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.486      ;
+; 0.335 ; seconds[20]                           ; seconds[20]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.487      ;
+; 0.335 ; minutes[15]                           ; minutes[15]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.487      ;
+; 0.335 ; minutes[20]                           ; minutes[20]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.487      ;
+; 0.335 ; minutes[29]                           ; minutes[29]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.487      ;
+; 0.335 ; hour[5]                               ; hour[5]                               ; clock        ; clock       ; 0.000        ; 0.000      ; 0.487      ;
+; 0.335 ; hour[14]                              ; hour[14]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.487      ;
+; 0.336 ; seconds[18]                           ; seconds[18]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.488      ;
+; 0.336 ; minutes[30]                           ; minutes[30]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.488      ;
+; 0.336 ; hour[8]                               ; hour[8]                               ; clock        ; clock       ; 0.000        ; 0.000      ; 0.488      ;
+; 0.336 ; hour[24]                              ; hour[24]                              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.488      ;
+; 0.337 ; seconds[2]                            ; seconds[2]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.489      ;
+; 0.337 ; seconds[11]                           ; seconds[11]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.489      ;
+; 0.337 ; seconds[12]                           ; seconds[12]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.489      ;
+; 0.337 ; seconds[15]                           ; seconds[15]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.489      ;
+; 0.337 ; minutes[5]                            ; minutes[5]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.489      ;
+; 0.337 ; minutes[8]                            ; minutes[8]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.489      ;
+; 0.337 ; minutes[14]                           ; minutes[14]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.489      ;
+; 0.337 ; minutes[24]                           ; minutes[24]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.489      ;
+; 0.338 ; minutes[18]                           ; minutes[18]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.490      ;
+; 0.341 ; minutes[27]                           ; minutes[27]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.493      ;
+; 0.344 ; hour[9]                               ; hour[9]                               ; clock        ; clock       ; 0.000        ; 0.000      ; 0.496      ;
+; 0.346 ; hour[4]                               ; hour[4]                               ; clock        ; clock       ; 0.000        ; 0.000      ; 0.498      ;
+; 0.353 ; Blinker:Blinker_DispA|blink_count[0]  ; Blinker:Blinker_DispA|blink_count[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.505      ;
+; 0.353 ; Blinker:Blinker_DispB|blink_count[0]  ; Blinker:Blinker_DispB|blink_count[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.505      ;
+; 0.355 ; Blinker:Blinker_DispA|clock_count[16] ; Blinker:Blinker_DispA|clock_count[16] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; Blinker:Blinker_DispA|blink_count[16] ; Blinker:Blinker_DispA|blink_count[16] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; clock_khz[0]                          ; clock_khz[0]                          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; clock_khz[16]                         ; clock_khz[16]                         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; Blinker:Blinker_DispB|clock_count[16] ; Blinker:Blinker_DispB|clock_count[16] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; Blinker:Blinker_DispB|blink_count[16] ; Blinker:Blinker_DispB|blink_count[16] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.507      ;
+; 0.357 ; Blinker:Blinker_DispA|blink_count[1]  ; Blinker:Blinker_DispA|blink_count[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.509      ;
+; 0.357 ; milisec[16]                           ; milisec[16]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.509      ;
+; 0.357 ; Blinker:Blinker_DispB|blink_count[1]  ; Blinker:Blinker_DispB|blink_count[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.509      ;
+; 0.359 ; Blinker:Blinker_DispA|clock_count[1]  ; Blinker:Blinker_DispA|clock_count[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; Blinker:Blinker_DispA|clock_count[17] ; Blinker:Blinker_DispA|clock_count[17] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; Blinker:Blinker_DispA|blink_count[17] ; Blinker:Blinker_DispA|blink_count[17] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; clock_khz[1]                          ; clock_khz[1]                          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; clock_khz[17]                         ; clock_khz[17]                         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; milisec[1]                            ; milisec[1]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; milisec[17]                           ; milisec[17]                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; Blinker:Blinker_DispB|clock_count[1]  ; Blinker:Blinker_DispB|clock_count[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; Blinker:Blinker_DispB|clock_count[17] ; Blinker:Blinker_DispB|clock_count[17] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; Blinker:Blinker_DispB|blink_count[17] ; Blinker:Blinker_DispB|blink_count[17] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360 ; Blinker:Blinker_DispA|clock_count[2]  ; Blinker:Blinker_DispA|clock_count[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; Blinker:Blinker_DispA|clock_count[9]  ; Blinker:Blinker_DispA|clock_count[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; Blinker:Blinker_DispA|clock_count[11] ; Blinker:Blinker_DispA|clock_count[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; Blinker:Blinker_DispA|clock_count[18] ; Blinker:Blinker_DispA|clock_count[18] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; Blinker:Blinker_DispA|clock_count[25] ; Blinker:Blinker_DispA|clock_count[25] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; Blinker:Blinker_DispA|clock_count[27] ; Blinker:Blinker_DispA|clock_count[27] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; Blinker:Blinker_DispA|blink_count[2]  ; Blinker:Blinker_DispA|blink_count[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; Blinker:Blinker_DispA|blink_count[9]  ; Blinker:Blinker_DispA|blink_count[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; Blinker:Blinker_DispA|blink_count[11] ; Blinker:Blinker_DispA|blink_count[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; Blinker:Blinker_DispA|blink_count[18] ; Blinker:Blinker_DispA|blink_count[18] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; Blinker:Blinker_DispA|blink_count[25] ; Blinker:Blinker_DispA|blink_count[25] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; Blinker:Blinker_DispA|blink_count[27] ; Blinker:Blinker_DispA|blink_count[27] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; clock_khz[2]                          ; clock_khz[2]                          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; clock_khz[9]                          ; clock_khz[9]                          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; clock_khz[11]                         ; clock_khz[11]                         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; clock_khz[18]                         ; clock_khz[18]                         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; clock_khz[25]                         ; clock_khz[25]                         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; clock_khz[27]                         ; clock_khz[27]                         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; milisec[2]                            ; milisec[2]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; milisec[9]                            ; milisec[9]                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock'                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[28] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[28] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[29] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[29] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[30] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[30] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[31] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[31] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|blink_count[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|bout            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|bout            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Blinker:Blinker_DispA|clock_count[24] ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; pb_down        ; clock      ; 4.628 ; 4.628 ; Rise       ; clock           ;
+; pb_mode_select ; clock      ; 3.001 ; 3.001 ; Rise       ; clock           ;
+; pb_next        ; clock      ; 3.034 ; 3.034 ; Rise       ; clock           ;
+; pb_up          ; clock      ; 4.162 ; 4.162 ; Rise       ; clock           ;
+; sw_enable      ; clock      ; 0.669 ; 0.669 ; Rise       ; clock           ;
+; sw_reset       ; clock      ; 1.896 ; 1.896 ; Rise       ; clock           ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; pb_down        ; clock      ; -2.107 ; -2.107 ; Rise       ; clock           ;
+; pb_mode_select ; clock      ; -2.019 ; -2.019 ; Rise       ; clock           ;
+; pb_next        ; clock      ; -1.955 ; -1.955 ; Rise       ; clock           ;
+; pb_up          ; clock      ; -2.231 ; -2.231 ; Rise       ; clock           ;
+; sw_enable      ; clock      ; -0.103 ; -0.103 ; Rise       ; clock           ;
+; sw_reset       ; clock      ; 0.396  ; 0.396  ; Rise       ; clock           ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; alarm_out       ; clock      ; 4.483 ; 4.483 ; Rise       ; clock           ;
+; disp_a_leds[*]  ; clock      ; 3.948 ; 3.948 ; Rise       ; clock           ;
+;  disp_a_leds[1] ; clock      ; 3.763 ; 3.763 ; Rise       ; clock           ;
+;  disp_a_leds[2] ; clock      ; 3.933 ; 3.933 ; Rise       ; clock           ;
+;  disp_a_leds[3] ; clock      ; 3.927 ; 3.927 ; Rise       ; clock           ;
+;  disp_a_leds[4] ; clock      ; 3.929 ; 3.929 ; Rise       ; clock           ;
+;  disp_a_leds[5] ; clock      ; 3.945 ; 3.945 ; Rise       ; clock           ;
+;  disp_a_leds[6] ; clock      ; 3.947 ; 3.947 ; Rise       ; clock           ;
+;  disp_a_leds[7] ; clock      ; 3.948 ; 3.948 ; Rise       ; clock           ;
+; disp_b_leds[*]  ; clock      ; 4.295 ; 4.295 ; Rise       ; clock           ;
+;  disp_b_leds[1] ; clock      ; 4.215 ; 4.215 ; Rise       ; clock           ;
+;  disp_b_leds[2] ; clock      ; 4.134 ; 4.134 ; Rise       ; clock           ;
+;  disp_b_leds[3] ; clock      ; 3.919 ; 3.919 ; Rise       ; clock           ;
+;  disp_b_leds[4] ; clock      ; 4.129 ; 4.129 ; Rise       ; clock           ;
+;  disp_b_leds[5] ; clock      ; 4.138 ; 4.138 ; Rise       ; clock           ;
+;  disp_b_leds[6] ; clock      ; 4.156 ; 4.156 ; Rise       ; clock           ;
+;  disp_b_leds[7] ; clock      ; 4.295 ; 4.295 ; Rise       ; clock           ;
+; disp_c_leds[*]  ; clock      ; 4.318 ; 4.318 ; Rise       ; clock           ;
+;  disp_c_leds[1] ; clock      ; 4.122 ; 4.122 ; Rise       ; clock           ;
+;  disp_c_leds[2] ; clock      ; 4.115 ; 4.115 ; Rise       ; clock           ;
+;  disp_c_leds[3] ; clock      ; 4.291 ; 4.291 ; Rise       ; clock           ;
+;  disp_c_leds[4] ; clock      ; 4.169 ; 4.169 ; Rise       ; clock           ;
+;  disp_c_leds[5] ; clock      ; 4.287 ; 4.287 ; Rise       ; clock           ;
+;  disp_c_leds[6] ; clock      ; 4.288 ; 4.288 ; Rise       ; clock           ;
+;  disp_c_leds[7] ; clock      ; 4.318 ; 4.318 ; Rise       ; clock           ;
+; disp_d_leds[*]  ; clock      ; 4.423 ; 4.423 ; Rise       ; clock           ;
+;  disp_d_leds[1] ; clock      ; 4.177 ; 4.177 ; Rise       ; clock           ;
+;  disp_d_leds[2] ; clock      ; 4.414 ; 4.414 ; Rise       ; clock           ;
+;  disp_d_leds[3] ; clock      ; 4.423 ; 4.423 ; Rise       ; clock           ;
+;  disp_d_leds[4] ; clock      ; 3.862 ; 3.862 ; Rise       ; clock           ;
+;  disp_d_leds[5] ; clock      ; 4.097 ; 4.097 ; Rise       ; clock           ;
+;  disp_d_leds[6] ; clock      ; 4.107 ; 4.107 ; Rise       ; clock           ;
+;  disp_d_leds[7] ; clock      ; 4.190 ; 4.190 ; Rise       ; clock           ;
+; mode_data       ; clock      ; 4.761 ; 4.761 ; Rise       ; clock           ;
+; mode_edit       ; clock      ; 4.422 ; 4.422 ; Rise       ; clock           ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; alarm_out       ; clock      ; 4.483 ; 4.483 ; Rise       ; clock           ;
+; disp_a_leds[*]  ; clock      ; 3.763 ; 3.763 ; Rise       ; clock           ;
+;  disp_a_leds[1] ; clock      ; 3.763 ; 3.763 ; Rise       ; clock           ;
+;  disp_a_leds[2] ; clock      ; 3.933 ; 3.933 ; Rise       ; clock           ;
+;  disp_a_leds[3] ; clock      ; 3.927 ; 3.927 ; Rise       ; clock           ;
+;  disp_a_leds[4] ; clock      ; 3.929 ; 3.929 ; Rise       ; clock           ;
+;  disp_a_leds[5] ; clock      ; 3.945 ; 3.945 ; Rise       ; clock           ;
+;  disp_a_leds[6] ; clock      ; 3.947 ; 3.947 ; Rise       ; clock           ;
+;  disp_a_leds[7] ; clock      ; 3.948 ; 3.948 ; Rise       ; clock           ;
+; disp_b_leds[*]  ; clock      ; 3.919 ; 3.919 ; Rise       ; clock           ;
+;  disp_b_leds[1] ; clock      ; 4.215 ; 4.215 ; Rise       ; clock           ;
+;  disp_b_leds[2] ; clock      ; 4.134 ; 4.134 ; Rise       ; clock           ;
+;  disp_b_leds[3] ; clock      ; 3.919 ; 3.919 ; Rise       ; clock           ;
+;  disp_b_leds[4] ; clock      ; 4.129 ; 4.129 ; Rise       ; clock           ;
+;  disp_b_leds[5] ; clock      ; 4.138 ; 4.138 ; Rise       ; clock           ;
+;  disp_b_leds[6] ; clock      ; 4.156 ; 4.156 ; Rise       ; clock           ;
+;  disp_b_leds[7] ; clock      ; 4.295 ; 4.295 ; Rise       ; clock           ;
+; disp_c_leds[*]  ; clock      ; 4.115 ; 4.115 ; Rise       ; clock           ;
+;  disp_c_leds[1] ; clock      ; 4.122 ; 4.122 ; Rise       ; clock           ;
+;  disp_c_leds[2] ; clock      ; 4.115 ; 4.115 ; Rise       ; clock           ;
+;  disp_c_leds[3] ; clock      ; 4.291 ; 4.291 ; Rise       ; clock           ;
+;  disp_c_leds[4] ; clock      ; 4.169 ; 4.169 ; Rise       ; clock           ;
+;  disp_c_leds[5] ; clock      ; 4.287 ; 4.287 ; Rise       ; clock           ;
+;  disp_c_leds[6] ; clock      ; 4.288 ; 4.288 ; Rise       ; clock           ;
+;  disp_c_leds[7] ; clock      ; 4.318 ; 4.318 ; Rise       ; clock           ;
+; disp_d_leds[*]  ; clock      ; 3.862 ; 3.862 ; Rise       ; clock           ;
+;  disp_d_leds[1] ; clock      ; 4.177 ; 4.177 ; Rise       ; clock           ;
+;  disp_d_leds[2] ; clock      ; 4.414 ; 4.414 ; Rise       ; clock           ;
+;  disp_d_leds[3] ; clock      ; 4.423 ; 4.423 ; Rise       ; clock           ;
+;  disp_d_leds[4] ; clock      ; 3.862 ; 3.862 ; Rise       ; clock           ;
+;  disp_d_leds[5] ; clock      ; 4.097 ; 4.097 ; Rise       ; clock           ;
+;  disp_d_leds[6] ; clock      ; 4.107 ; 4.107 ; Rise       ; clock           ;
+;  disp_d_leds[7] ; clock      ; 4.190 ; 4.190 ; Rise       ; clock           ;
+; mode_data       ; clock      ; 4.761 ; 4.761 ; Rise       ; clock           ;
+; mode_edit       ; clock      ; 4.422 ; 4.422 ; Rise       ; clock           ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -6.271    ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  clock           ; -6.271    ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -2100.215 ; 0.0   ; 0.0      ; 0.0     ; -544.199            ;
+;  clock           ; -2100.215 ; 0.000 ; N/A      ; N/A     ; -544.199            ;
++------------------+-----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------+
+; Setup Times                                                                  ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; pb_down        ; clock      ; 10.841 ; 10.841 ; Rise       ; clock           ;
+; pb_mode_select ; clock      ; 6.807  ; 6.807  ; Rise       ; clock           ;
+; pb_next        ; clock      ; 6.897  ; 6.897  ; Rise       ; clock           ;
+; pb_up          ; clock      ; 9.954  ; 9.954  ; Rise       ; clock           ;
+; sw_enable      ; clock      ; 2.950  ; 2.950  ; Rise       ; clock           ;
+; sw_reset       ; clock      ; 6.047  ; 6.047  ; Rise       ; clock           ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; pb_down        ; clock      ; -2.107 ; -2.107 ; Rise       ; clock           ;
+; pb_mode_select ; clock      ; -2.019 ; -2.019 ; Rise       ; clock           ;
+; pb_next        ; clock      ; -1.955 ; -1.955 ; Rise       ; clock           ;
+; pb_up          ; clock      ; -2.231 ; -2.231 ; Rise       ; clock           ;
+; sw_enable      ; clock      ; -0.103 ; -0.103 ; Rise       ; clock           ;
+; sw_reset       ; clock      ; 0.396  ; 0.396  ; Rise       ; clock           ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; alarm_out       ; clock      ; 8.803 ; 8.803 ; Rise       ; clock           ;
+; disp_a_leds[*]  ; clock      ; 7.451 ; 7.451 ; Rise       ; clock           ;
+;  disp_a_leds[1] ; clock      ; 7.052 ; 7.052 ; Rise       ; clock           ;
+;  disp_a_leds[2] ; clock      ; 7.449 ; 7.449 ; Rise       ; clock           ;
+;  disp_a_leds[3] ; clock      ; 7.431 ; 7.431 ; Rise       ; clock           ;
+;  disp_a_leds[4] ; clock      ; 7.428 ; 7.428 ; Rise       ; clock           ;
+;  disp_a_leds[5] ; clock      ; 7.450 ; 7.450 ; Rise       ; clock           ;
+;  disp_a_leds[6] ; clock      ; 7.448 ; 7.448 ; Rise       ; clock           ;
+;  disp_a_leds[7] ; clock      ; 7.451 ; 7.451 ; Rise       ; clock           ;
+; disp_b_leds[*]  ; clock      ; 8.352 ; 8.352 ; Rise       ; clock           ;
+;  disp_b_leds[1] ; clock      ; 8.103 ; 8.103 ; Rise       ; clock           ;
+;  disp_b_leds[2] ; clock      ; 7.995 ; 7.995 ; Rise       ; clock           ;
+;  disp_b_leds[3] ; clock      ; 7.419 ; 7.419 ; Rise       ; clock           ;
+;  disp_b_leds[4] ; clock      ; 7.975 ; 7.975 ; Rise       ; clock           ;
+;  disp_b_leds[5] ; clock      ; 7.988 ; 7.988 ; Rise       ; clock           ;
+;  disp_b_leds[6] ; clock      ; 7.996 ; 7.996 ; Rise       ; clock           ;
+;  disp_b_leds[7] ; clock      ; 8.352 ; 8.352 ; Rise       ; clock           ;
+; disp_c_leds[*]  ; clock      ; 8.405 ; 8.405 ; Rise       ; clock           ;
+;  disp_c_leds[1] ; clock      ; 7.973 ; 7.973 ; Rise       ; clock           ;
+;  disp_c_leds[2] ; clock      ; 7.961 ; 7.961 ; Rise       ; clock           ;
+;  disp_c_leds[3] ; clock      ; 8.349 ; 8.349 ; Rise       ; clock           ;
+;  disp_c_leds[4] ; clock      ; 8.026 ; 8.026 ; Rise       ; clock           ;
+;  disp_c_leds[5] ; clock      ; 8.359 ; 8.359 ; Rise       ; clock           ;
+;  disp_c_leds[6] ; clock      ; 8.361 ; 8.361 ; Rise       ; clock           ;
+;  disp_c_leds[7] ; clock      ; 8.405 ; 8.405 ; Rise       ; clock           ;
+; disp_d_leds[*]  ; clock      ; 8.539 ; 8.539 ; Rise       ; clock           ;
+;  disp_d_leds[1] ; clock      ; 8.079 ; 8.079 ; Rise       ; clock           ;
+;  disp_d_leds[2] ; clock      ; 8.516 ; 8.516 ; Rise       ; clock           ;
+;  disp_d_leds[3] ; clock      ; 8.539 ; 8.539 ; Rise       ; clock           ;
+;  disp_d_leds[4] ; clock      ; 7.244 ; 7.244 ; Rise       ; clock           ;
+;  disp_d_leds[5] ; clock      ; 7.943 ; 7.943 ; Rise       ; clock           ;
+;  disp_d_leds[6] ; clock      ; 7.864 ; 7.864 ; Rise       ; clock           ;
+;  disp_d_leds[7] ; clock      ; 8.083 ; 8.083 ; Rise       ; clock           ;
+; mode_data       ; clock      ; 9.289 ; 9.289 ; Rise       ; clock           ;
+; mode_edit       ; clock      ; 8.590 ; 8.590 ; Rise       ; clock           ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; alarm_out       ; clock      ; 4.483 ; 4.483 ; Rise       ; clock           ;
+; disp_a_leds[*]  ; clock      ; 3.763 ; 3.763 ; Rise       ; clock           ;
+;  disp_a_leds[1] ; clock      ; 3.763 ; 3.763 ; Rise       ; clock           ;
+;  disp_a_leds[2] ; clock      ; 3.933 ; 3.933 ; Rise       ; clock           ;
+;  disp_a_leds[3] ; clock      ; 3.927 ; 3.927 ; Rise       ; clock           ;
+;  disp_a_leds[4] ; clock      ; 3.929 ; 3.929 ; Rise       ; clock           ;
+;  disp_a_leds[5] ; clock      ; 3.945 ; 3.945 ; Rise       ; clock           ;
+;  disp_a_leds[6] ; clock      ; 3.947 ; 3.947 ; Rise       ; clock           ;
+;  disp_a_leds[7] ; clock      ; 3.948 ; 3.948 ; Rise       ; clock           ;
+; disp_b_leds[*]  ; clock      ; 3.919 ; 3.919 ; Rise       ; clock           ;
+;  disp_b_leds[1] ; clock      ; 4.215 ; 4.215 ; Rise       ; clock           ;
+;  disp_b_leds[2] ; clock      ; 4.134 ; 4.134 ; Rise       ; clock           ;
+;  disp_b_leds[3] ; clock      ; 3.919 ; 3.919 ; Rise       ; clock           ;
+;  disp_b_leds[4] ; clock      ; 4.129 ; 4.129 ; Rise       ; clock           ;
+;  disp_b_leds[5] ; clock      ; 4.138 ; 4.138 ; Rise       ; clock           ;
+;  disp_b_leds[6] ; clock      ; 4.156 ; 4.156 ; Rise       ; clock           ;
+;  disp_b_leds[7] ; clock      ; 4.295 ; 4.295 ; Rise       ; clock           ;
+; disp_c_leds[*]  ; clock      ; 4.115 ; 4.115 ; Rise       ; clock           ;
+;  disp_c_leds[1] ; clock      ; 4.122 ; 4.122 ; Rise       ; clock           ;
+;  disp_c_leds[2] ; clock      ; 4.115 ; 4.115 ; Rise       ; clock           ;
+;  disp_c_leds[3] ; clock      ; 4.291 ; 4.291 ; Rise       ; clock           ;
+;  disp_c_leds[4] ; clock      ; 4.169 ; 4.169 ; Rise       ; clock           ;
+;  disp_c_leds[5] ; clock      ; 4.287 ; 4.287 ; Rise       ; clock           ;
+;  disp_c_leds[6] ; clock      ; 4.288 ; 4.288 ; Rise       ; clock           ;
+;  disp_c_leds[7] ; clock      ; 4.318 ; 4.318 ; Rise       ; clock           ;
+; disp_d_leds[*]  ; clock      ; 3.862 ; 3.862 ; Rise       ; clock           ;
+;  disp_d_leds[1] ; clock      ; 4.177 ; 4.177 ; Rise       ; clock           ;
+;  disp_d_leds[2] ; clock      ; 4.414 ; 4.414 ; Rise       ; clock           ;
+;  disp_d_leds[3] ; clock      ; 4.423 ; 4.423 ; Rise       ; clock           ;
+;  disp_d_leds[4] ; clock      ; 3.862 ; 3.862 ; Rise       ; clock           ;
+;  disp_d_leds[5] ; clock      ; 4.097 ; 4.097 ; Rise       ; clock           ;
+;  disp_d_leds[6] ; clock      ; 4.107 ; 4.107 ; Rise       ; clock           ;
+;  disp_d_leds[7] ; clock      ; 4.190 ; 4.190 ; Rise       ; clock           ;
+; mode_data       ; clock      ; 4.761 ; 4.761 ; Rise       ; clock           ;
+; mode_edit       ; clock      ; 4.422 ; 4.422 ; Rise       ; clock           ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 59282    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 59282    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 6     ; 6    ;
+; Unconstrained Input Port Paths  ; 817   ; 817  ;
+; Unconstrained Output Ports      ; 31    ; 31   ;
+; Unconstrained Output Port Paths ; 31    ; 31   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
+    Info: Processing started: Thu Mar 21 14:18:43 2013
+Info: Command: quartus_sta AlarmClock -c AlarmClock
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'AlarmClock.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -6.271
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -6.271     -2100.215 clock 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631      -544.199 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.001
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.001      -553.069 clock 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380      -445.380 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 455 megabytes
+    Info: Processing ended: Thu Mar 21 14:19:14 2013
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:30
+
+

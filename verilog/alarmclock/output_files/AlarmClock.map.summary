@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Mar 21 14:17:23 2013
+Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Web Edition
+Revision Name : AlarmClock
+Top-level Entity Name : AlarmClock
+Family : Cyclone II
+Total logic elements : 1,175
+    Total combinational functions : 1,169
+    Dedicated logic registers : 444
+Total registers : 444
+Total pins : 38
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
