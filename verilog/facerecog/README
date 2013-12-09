@@ -1,0 +1,36 @@
+README file for ERCBench implementation of Face Detection
+Author: Daniel Chang (dwchang@wisc.edu)
+
+Note: This implementation is heavily based on an implementation by Junguk Cho and Ryan
+Kastner at the University of California, San Diego.
+
+List of files included:
+-CLASSIFIER_kernel.v: the main module containing the algorithm and image manipulation
+-CLASSIFIER_kernel_tb.v: a testbench for functional testing
+-FEAT_INFO_RECT0_ROM.v: a read-only memory containing feature data
+-FEAT_INFO_RECT1_ROM.v: a read-only memory containing feature data
+-FEAT_INFO_RECT2_ROM.v: a read-only memory containing feature data
+-FEAT_LEFT_ROM.v: a read-only memory containing the left feature data
+-FEAT_RIGHT_ROM.v: a read-only memory containing the right feature data
+-FEAT_THRESHOLD_ROM.v: a read-only memory containing the feature threshold data
+-STAGE_FEATURE_ROM.v: a read-only memory containing the stage threshold data
+-BRAM versions of the above ROMs
+-integral_dataXYZ.txt: 5 integral images that contain a face
+-integral_data_nofaceXYZ.txt: 5 integral images that do not contain a face
+-integral_data_zero.txt: an integral image containing all 0's (for debug)
+-README.txt: this README file
+
+Instructions:
+To simulate this module for standard cell, create a new project in ModelSIM (or your 
+simulator of choice) and simply import these existing files and then comment in the ROM 
+instantiations and comment out the BRAM instantiations in the CLASSIFIER_kernel.v file. 
+After the ROMs are instantiated and the BRAMs are commented out, simulate the 
+CLASSIFIER_kernel_tb.v testbench file with the integral image of your choice. 
+If the "Detected" signal is '1' then a face has been detected. If the "Failed" signal is 
+'1' then a stage has failed. To change the integral image simply edit which .txt file 
+is being read. This can be found at the bottom of the CLASSIFIER_kernel_tb.v file.
+
+To simulate this module for FPGA, comment out the ROM instantiations and comment in the 
+BRAM instantiations in the CLASSIFIER_kernel.v file and simulate/synthesize. The 
+functionality should be the same (i.e. if a face is detected, the "Detected" signal will
+be '1' and if not, the "Failed" signal will be '1.' 
